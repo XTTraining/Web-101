@@ -63,11 +63,18 @@ var cartController = (function () {
             }
             var temp_sum = parseFloat(cartDetails.subTotal + cartDetails.shippingCost).toFixed(2);
 
-            if (temp_sum > cartDetails.promodiscount) {
+            if (cartDetails.list.length > 0) {
 
-                cartDetails.totalCost = parseFloat(temp_sum - cartDetails.promodiscount).toFixed();
+                if (temp_sum > cartDetails.promodiscount) {
+
+                    cartDetails.totalCost = parseFloat(temp_sum - cartDetails.promodiscount).toFixed();
+                } else {
+                    cartDetails.totalCost = temp_sum;
+                }
             } else {
-                cartDetails.totalCost = temp_sum;
+                cartDetails.shippingCost = 0;
+                cartDetails.totalCost = 0;
+                cartDetails.promodiscount = 0;
             }
 
             return cartDetails;
@@ -157,8 +164,8 @@ var UIController = (function () {
         totalBill: '#totalBill',
         subTotal: '#subTotal',
         delete_icon: '#delete-icon',
-        cartmessage:".cart-message",
-       
+        cartmessage: ".cart-message",
+
 
         // Promotion code
         promocode: '#promo-code',
@@ -278,7 +285,7 @@ var UIController = (function () {
 
             el.parentNode.removeChild(el);
             //cart-message
-            
+
         },
 
         updatecarttotal: function (cart) {
@@ -331,10 +338,9 @@ var UIController = (function () {
                 document.querySelector(DOMstrings.shippingCost).innerHTML = '<sup>$</sup>' + cart.shippingCost;
                 document.querySelector(DOMstrings.textshippingcostinfo).innerHTML = '';
             }
-            if(cart.list.length == 0)
-            {
-                document.querySelector(DOMstrings.cartmessage).style.display='block';
-               
+            if (cart.list.length == 0) {
+                document.querySelector(DOMstrings.cartmessage).style.display = 'block';
+
             }
 
         },
@@ -509,7 +515,7 @@ var appController = (function (cartCtrrl, UICtrl) {
                 var promoApplyBtn = document.querySelector(DOM.btn_promo_apply);
                 //if valid update the pricing
                 if (isValid) {
-                     promoCodeValField.classList.remove("red-focus");
+                    promoCodeValField.classList.remove("red-focus");
                     var cart = cartCtrrl.updateCartdetails();
 
                     UICtrl.updatecarttotal(cart);

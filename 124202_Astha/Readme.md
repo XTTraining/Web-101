@@ -2,7 +2,7 @@ Below functionalities has been completed:
 Remove:
 -products get removed from cart
 -no of items change
--message when no profucts available
+-message when no products available
 
 Edit:
 -overlay appears with title, price,color,size,quantity information

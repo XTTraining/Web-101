@@ -1,0 +1,41 @@
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+    body{
+        font-size: 16px;
+        margin-left: 5px;
+    }
+    section { padding: 15px 0; }
+    h2 { font-size: 14px;font-weight: 400; word-spacing: 1px;float: left;}
+    h2:after{display: none;}
+    .cart-header{display: none;}
+    .item-count{display: block;float: right;font-size: 12px;}
+    .heading-row:after {
+    display: block;
+    height: 3px;
+    background-color: #ddd;
+    content: " ";
+    width: auto;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+    .item-image{width:45%;}
+    .item-detail{width:45%;font-size: 12px;}
+    .mobile-btn{display: block;padding-bottom: 10px;}
+    .desktop-btn,.cart-help,.desktop-msg{display: none;}
+    .item-value{display: none;}
+    .mobile-details,.mobile-msg{display: block;}
+    .mobile-details input{width:30%;}
+    .qty-label,.unit-label{float:left;padding-right: 10px;}
+    .qty,.unit{margin-top: 20px;}
+    .promotion-text {text-align:center;padding-bottom: 10px;}
+    .promotion-text p{float:none;}
+    .promotion{padding-top:0}
+    .subtotal-text p,.applied-text p,.shipping-text p{font-size: 14px;}
+    .shipping-info p{float:left;padding-bottom: 20px;}
+    .shipping-div {width: 50%;}
+    .mobile-total{width:70%}
+    .total-text p{float: none;font-size: 20px;}
+    .total-info p{float: none;font-size: 14px;margin-bottom: 10px;max-width: 80%;line-height: 100%;}
+    
+}

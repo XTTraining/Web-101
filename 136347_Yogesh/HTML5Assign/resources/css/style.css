@@ -1,0 +1,461 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #A0A0A0;
+    font-family: 'Lato', 'Arial', sans-serif;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    font-size: 12px;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.content {
+    padding: 0px 15px 0px 15px;
+}
+
+.yourshopping {
+    padding: 30px 15px 75px 15px;
+    font-size: 60px;
+    border-bottom: 1px solid #dcdce2;
+
+}
+
+/* Create three equal columns that floats next to each other */
+
+.column {
+    float: left;
+    padding: 10px;
+    height: 45px;
+    border-bottom: 3px solid #dcdce2;
+}
+
+
+.column1 {
+    width: 30%;
+
+}
+
+.column2 {
+    width: 40%;
+    text-align: right;
+}
+
+.column3 {
+    width: 10%;
+    text-align: right;
+}
+
+.column4 {
+    width: 10%;
+    text-align: right;
+}
+
+.column5 {
+    width: 10%;
+    text-align: right;
+}
+
+/*row*/
+
+.columnrow {
+    float: left;
+    padding: 10px;
+    height: 209px;
+    border-bottom: 1px solid #dcdce2;
+    height: 209px;
+}
+
+.columnrow1 {
+    width: 30%;
+}
+
+.columnrow2 {
+    width: 40%;
+    padding-top: 35px;
+}
+
+.columnrow3 {
+    width: 10%;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.columnrow4 {
+    width: 10%;
+    text-align: right;
+}
+
+.columnrow5 {
+    width: 10%;
+    text-align: right;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    border-bottom: 1px solid #dcdce2;
+    border-bottom: 1px solid #dcdce2;
+
+}
+
+.qtyinput {
+    width: 30px;
+    text-align: center;
+    border: 1px solid #dcdce2;
+}
+
+.responsiveimg {
+    max-width: 100%;
+    height: auto;
+}
+
+.spanproduct-name {
+    font-weight: bold;
+    color: #808080;
+    padding-bottom: 8px;
+}
+
+.columnrowcheckout {
+    float: left;
+    padding: 10px;
+    height: 209px;
+    height: 209px;
+    margin-top: 68px;
+}
+
+.columnrowcheckout1 {
+    width: 40%;
+}
+
+.columnrowcheckout2 {
+    width: 60%;
+}
+
+.checkouttextheight {
+    padding-bottom: 25px;
+}
+
+.checkputinput {
+    width: 70%;
+    height: 35px;
+    border: 1px solid #dcdce2;
+    padding: 0 8px 0 8px;
+}
+
+.checkoutbutton {
+    width: 24%;
+    height: 35px;
+    margin-left: 12px;
+    background-color: white;
+    border: 1px solid #dcdce2;
+}
+
+.checkoutbutton-style {
+    width: 24%;
+    height: 35px;
+    margin-left: 12px;
+    background-color: #269abc;
+    color: white;
+    border: none;
+}
+
+.border-estimated {
+
+    border-bottom: 3px solid #dcdce2;
+    padding-bottom: 275px;
+
+}
+
+.border-threepx {
+
+    border-bottom: 3px solid #dcdce2;
+    padding-bottom: 85px;
+
+}
+
+.border-onepx {
+
+    border-bottom: 1px solid #dcdce2;
+    padding-bottom: 85px;
+
+}
+
+.checkoutlefttext {
+    width: 60%;
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.checkoutrighttext {
+    text-align: right;
+    width: 40%;
+    float: right;
+    padding-right: 8px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.checkoutlefttext-continue {
+    width: 40%;
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.checkoutrighttext-continue {
+    text-align: right;
+    width: 60%;
+    float: right;
+    padding-right: 8px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+element.style {}
+
+.Secure-text {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 8px;
+}
+
+.total-item {
+    display: none;
+}
+
+.mobile-edit {
+    display: none;
+}
+
+.promocode-text {
+    width: 31%;
+    float: left
+}
+
+.promocode-input {
+    width: 40%;
+    float: right;
+}
+
+.size-qtymobile {
+    display: none;
+}
+
+.desktop-edit {
+
+    padding-top: 45px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .size-qtymobile {
+        display: block;
+    }
+    .yourshopping {
+        font-size: 20px;
+        border-bottom: none;
+        padding: 30px 15px 0px 15px;
+
+    }
+    .titem {
+        display: none;
+    }
+    .column.column3 {
+        display: none;
+    }
+    .column.column4 {
+        display: none;
+    }
+    .column column4 {
+        display: none;
+    }
+    .column.column5 {
+        display: none;
+    }
+    .column2 {
+        width: 70%;
+    }
+    .total-item {
+        display: inline-block;
+
+        margin-left: 50px;
+    }
+    .columnrow.columnrow3 {
+        display: none;
+    }
+    .columnrow.columnrow4 {
+        display: none;
+    }
+    .columnrow.columnrow5 {
+        display: none;
+    }
+    .columnrow2 {
+        width: 70%;
+    }
+    .desktop-edit {
+        display: none;
+    }
+    .mobile-edit {
+        display: block;
+    }
+    .mobile-edit {
+        padding: 0 50px 30px 50px;
+    }
+    .product {
+        border-bottom: 1px solid #dcdce2;
+    }
+    .columnrow {
+        height: 209px;
+        border-bottom: none;
+    }
+
+    .columnrowcheckout1 {
+        display: none;
+    }
+    .columnrowcheckout2 {
+        width: 100%;
+    }
+    .promocode-text {
+        width: 100%;
+        float: left;
+        padding-bottom: 10px;
+    }
+    .promocode-input {
+        width: 100%;
+        float: left;
+    }
+    .border-threepx {
+
+        padding-bottom: 130px;
+    }
+    .checkputinput {
+        width: 70%;
+        height: 54px;
+        border: 1px solid #dcdce2;
+        padding: 0 8px 0 8px;
+    }
+    .checkoutbutton {
+        width: 24%;
+        height: 54px;
+        margin-left: 12px;
+        background-color: white;
+        border: 1px solid #dcdce2;
+    }
+    .mobile-qty {
+        margin: 30px 0 30px 0;
+    }
+    .checkoutrighttext-continue {
+
+        width: 100%;
+        position: relative;
+        text-align: center;
+        height: 97px;
+    }
+    .checkoutbutton-style {
+        width: 62%;
+        height: 45px;
+        margin-left: 12px;
+        background-color: #269abc;
+        color: white;
+        border: none;
+        position: absolute;
+        bottom: 58px;
+        left: 52px;
+        margin-bottom: 40px;
+    }
+   
+    .img-secure{
+        display: none;
+    }
+}
+
+
+/*Iphone5*/
+
+@media only screen and (max-width: 375px) {
+    .total-item {
+        display: inline-block;
+        margin-left: 14px;
+    }
+}
+
+
+/*
+@media only screen and (max-width: 600px) {
+    .column1 {
+        width: 30%;
+    }
+
+    .column2 {
+        width: 70%;
+    }
+
+    .column3 {
+        width: 0%;
+        display: none;
+    }
+
+    .column4 {
+        width: 0%;
+        display: none;
+    }
+
+    .column5 {
+        width: 0%;
+        display: none;
+    }
+
+    .columnrow1 {
+        width: 40%;
+    }
+
+    .columnrow2 {
+        width: 60%;
+         float: left;
+          padding: 10px;
+        height: 209px;
+    }
+
+    .columnrow3 {
+        width: 0%;
+        display: none;
+    }
+
+    .columnrow4 {
+        width: 0%;
+        display: none;
+    }
+
+    .columnrow5 {
+        width: 0%;
+        display: none;
+    }
+    .yourshopping{
+        font-size: 22px;
+        border-bottom:none;
+    }
+   
+}
+*/

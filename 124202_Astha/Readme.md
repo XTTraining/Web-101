@@ -14,4 +14,8 @@ Calculating Total:<br>
 <br>
 responsive:<br>
 only done for ipad<br>
+<br>
+Accessibility:<br>
+verified in achecker<br>
+Asseccibility for drop down is not achieved as their is no label for drop down in design.<br>
 

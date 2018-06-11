@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+
+    <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
+
+    <title>Shopping Bag</title>
+</head>
+
+<body>
+    <!--Edit Modal Pop Up-->
+    <div id="overlay"></div>
+    <div id="editpopup" role="group">
+        <div id="editcontainer">
+           
+
+            <div class="row">
+                <form role="form" id="editForm" type="post">
+                    <input type="hidden" id="edit_code">
+                     <span id="popupclose" class="close">&times;</span>
+                  
+                    <div class="col span-6-of-12 edit-details">
+
+
+                        <div class="row" id="edit_name"></div>
+
+                        <div class="row"><sup>$</sup><span id="edit_price"></span></div>
+
+                        <div class="row" id="edit_color_heading">
+                            <span>Blue</span>
+                        </div>
+                        <div class="row edit_color">
+
+                            <input type="text" class="" id="edit_color_Option1">
+
+                            <input type="text" class="" id="edit_color_Option2">
+                        </div>
+
+
+
+                        <div class="row edit_dropdown">
+                           
+                                <select id="edit_size" placeholder="SIZE">
+                                <option value="" selected>SIZE</option>
+                                   <option value="S">S</option>
+                                   <option value="M">M</option>
+                                   <option value="L">L</option>
+                                    </select>
+
+                            
+                                 <select id="edit_qty" placeholder="QTY">
+                                   <option value="">QTY</option>
+                                   <option value="1" selected>QTY:1</option>
+                                   <option value="2">QTY:2</option>
+                                   <option value="3">QTY:3</option>
+                                </select>
+                           
+                        </div>
+
+                        <div><button role="button" id="editSubmit" class="btn-blue">EDIT</button></div>
+                        <div class=" edit_footer">See product details</div>
+
+                    </div>
+                  
+                    <div class="col span-5-of-12" class="edit_image" >
+                       <!-- <img src="resources/img/blue-shirt.jpg" alt="" id="edit_image">-->
+                         <img src="" alt="" id="edit_image">
+                    </div>
+                   
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <header role="banner" class="row">
+        <!-- Title -->
+        <h1>Your Shopping Bag</h1>
+    </header>
+
+    <section role="group">
+        <div class="row box_header">
+
+            <div class="col span-8-of-12 cart_count">
+                <span id="cartItemsCount">3</span> &nbsp; ITEMS
+            </div>
+            <div class="col span-1-of-12 hide_n_tab">
+
+            </div>
+            <div class="col span-1-of-12 hide_n_tab">
+                SIZE
+            </div>
+            <div class="col span-1-of-12 hide_n_tab">
+                QTY
+            </div>
+            <div class="col span-1-of-12 hide_n_tab">
+                PRICE
+            </div>
+        </div>
+        <div>
+            <div class="box_shopping_cart">
+                <!--  Cart Items Container    -->
+
+
+            </div>
+        </div>
+    </section>
+
+    <section role="group">
+        <div class="row">
+
+            <!-- Billing  container   --->
+            <div class="col span-2-of-12 site-helptext hide_n_tab">
+                <div>
+                    <span>Need help</span>
+                    <span>or have questions  &#63;</span>
+                </div>
+                <div class="text-muted">
+                    <span>Call Customer Service at</span>
+                    <span>1-800-555-5555</span>
+                </div>
+                <div class="text-muted text-underline">
+                    <span>Chat with one of</span>
+                    <span>our stylists</span>
+                </div>
+                <div class="text-muted text-underline">
+                    <span>See return</span>
+                    <span>&amp; exhange policy</span>
+                </div>
+            </div>
+            <div class="col span-1-of-12 hide_n_tab"></div>
+            <div class="col span-9-of-12">
+                <div class="row item-border">
+                    <div class="col span-4-of-12 promo_text">
+                        <span>Enter Promotion code</span>
+                        <span>Or Gift Card</span>
+                    </div>
+
+                    <div class="col span-8-of-12 promo">
+                        <div class="row">
+                        <input type="text" id="promo-code" min="4" maxlength="4">
+                        <input type="text" id="btn-promo-apply" value="APPLY" readonly>
+                        <span id="promocode-message"></span>
+                            </div>
+                    </div>
+                </div>
+                <div class="row shopping-bill item box_shopping_cart_item">
+                    <div class="col span-3-of-8 section-billing section-billing-list">
+                        <div>SubTotal</div>
+                        <div class="promo_row_text">Promotion Code&nbsp;<span id="promcode_applied"></span>Applied</div>
+                        <div>Estimated Shipping*
+                            <span id="text-shippingcost-info">
+                            <span><span class="billing_text_info">You qualify for free shipping</span>
+                            <span class="billing_text_info">because your order is over $50*</span></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col span-4-of-8  section-billing section-billing-price">
+                        <div><sup>$</sup><span id="subTotal">37.00</span></div>
+                        <div class="promo_row_value">-<sup>$</sup><span id="promodiscount">7.00</span></div>
+                        <div id="shippingCost">
+                            FREE
+                        </div>
+                    </div>
+                </div>
+                <div class="row item-border final-bill_row">
+                    <div class="col span-1-of-2">
+                        <div class="total_text">Estimated Total</div>
+                        <span class="billing_text_info">Tax will be applied during checkout</span>
+                    </div>
+                    <div class="col span-1-of-2">
+                        <div class="final-bill"><sup>$</sup><span id="totalBill">0</span></div>
+                    </div>
+                </div>
+                <div class="row section-checkout">
+                    <p>
+                        <span class="text-underline btn-continue">Continue Shopping</span>
+                        <span class="btn btn-blue"> Checkout</span>
+                    </p>
+                </div>
+                <div class="row">
+                   
+                   
+                  
+                    <i class="icon icon-lock"></i>
+                    <p class=" text-muted footer">
+                    Secure checkout. Shopping is always safe and secure</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="resources/js/script.js"></script>
+</body>
+
+</html>

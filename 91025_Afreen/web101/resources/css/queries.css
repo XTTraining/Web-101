@@ -1,0 +1,24 @@
+
+/* big tablet to 1200 px */
+@media only screen and (max-width: 1200px) {
+    
+}
+
+
+/* apply css to devices which are less or equal than 1023 px width such as small tablets to big tab;ests ; 768 to 1023 */
+@media only screen and (max-width: 1023px) {
+    
+    
+    
+}
+
+/* apply css to devices which are less or equal than 767 px width such as ipad small phones to small tab;ests ; 481 to 767 */
+@media only screen and (max-width: 767px) {
+    
+  
+}
+
+/* apply css to devices which are less than 480 px width such as iphone5,4, small phones  */ 
+@media only screen and (max-width: 480px) {
+    
+}

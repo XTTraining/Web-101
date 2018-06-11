@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: "Lato", "Arial", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* ------ Header ------ */
+
+header {
+    padding-bottom: 3%;
+}
+
+
+/*
+header:after {
+    content: "";
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    width: 95%;
+    border-bottom: 1px solid #dddbdc;
+}
+*/
+
+h1 {
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 200%;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+/* ------ Cart-Itmes ------ */
+
+.cart-items {
+    margin: 0 30px;
+}
+
+.table-head {
+    width: 100%;
+}
+
+.item-head:before,
+.item-head:after {
+    content: "";
+    display: block;
+    margin: auto;
+
+    /* position: absolute; */
+    width: 100%;
+    border-bottom: 1px solid #dddbdc;
+}
+
+.item-head:after {
+    border-bottom: 5px solid #dddbdc;
+}
+
+.table-head th {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300;
+    font-size: 65%;
+    letter-spacing: 1px;
+    width: 10%;
+    padding: 14px 0;
+}
+
+.table-head th:nth-of-type(1) {
+    width: 70%;
+    text-align: left;
+    padding-left: 10px;
+}
+
+table-head tr:nth-of-type(1) {}
+
+
+.cart-placeholder .col {
+    float: none;
+    display: block;
+    margin: 1% 0 1% 0%;
+    border-bottom: 1px solid #dddbdc;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+.cart-placeholder .col:last-of-type {
+    border-bottom: 5px solid #dddbdc;
+}
+
+.cart-placeholder .col div {
+    float: left;
+}
+
+.item-pic {
+    width: calc(20% - 30px);
+    height: auto;
+    margin-right: 20px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.item-pic img {
+    width: 100%;
+}
+
+.item-desc {
+    width: 50%;
+    font-size: 68%;
+    margin-top: 2%;
+}
+
+.item-desc p {
+    padding: 2px 10px;
+
+}
+
+.item-desc p:nth-of-type(1) {
+    font-size: 115%;
+    text-transform: uppercase;
+    font-weight: 400;
+
+}
+
+.item-size,
+.item-qty,
+.item-price {
+    width: 10%;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.item-qty textarea {
+    width: 32px;
+    height: 26px;
+    resize: none;
+    text-align: center;
+    font-weight: 300;
+}
+
+.item-modify ul {
+    list-style: none;
+}
+
+.item-modify ul li {
+    display: inline;
+}
+
+/* ------ The Modal ------ */
+
+.modal {
+/*    display: none;*/
+    position: fixed;
+    z-index: 99;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: height 1s;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 2px #585858;
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* CheckOut section */
+
+.support {
+    width: 35%;
+    font-size: 80%;
+    float: left;
+    padding: 0 0 0 4%;
+}
+
+.support p {
+    margin: 15px 0;
+    width: 165px;
+}
+
+.support .help {
+    font-weight: 400;
+}
+
+.support .chat {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.checkout {
+    width: 65%;
+    float: right;
+    margin: 15px 0;
+    padding-right: 4%;
+}
+.promo {
+        border-bottom: 5px solid #dddbdc;
+    height: 80px;
+}
+.promo p {
+    float: left;
+    text-transform: uppercase;
+    width: 200px;
+    font-size: 80%;
+}
+
+.promo button {
+    background-color: #fefefe;
+    float: right;
+    font-size: 80%;
+    padding: 10px 19px;
+        margin-left: 10px;
+}
+
+.promo input {
+height: 40px;
+    float: right;
+}
+
+.calculation table {
+   width: 100%;
+    font-size: 80%;
+    font-weight: 400;
+}
+.calculation table td{
+ margin-bottom: 10px;
+}
+table td{
+    padding: 25px 0px;
+}
+table td:last-child{
+    text-align: right;
+}
+table sub {
+    top: -0.4em;
+    font-size: 55%;
+}
+.m-value{
+    font-size: 125%;
+}

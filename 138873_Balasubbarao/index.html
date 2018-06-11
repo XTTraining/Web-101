@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Shopping Bag</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- shopping bag title -->
+        <header>
+            your shopping bag <span class="header-total-items show-mob"></span>
+        </header>
+        <!-- shopping bag list -->
+        <div class="shopping-bag-list">
+            <div class="top-line"></div>
+            <!--START : shopping bag list heading -->
+            <div class="shopping-bag-list-heading">
+                <div class="header--row--total--items shopping-bag-col-first">
+
+                </div>
+                <div class="shopping-bag-col">
+                    size
+                </div>
+                <div class="shopping-bag-col">
+                    qty
+                </div>
+                <div class="shopping-bag-col">
+                    price
+                </div>
+            </div>
+            <!-- END : shopping bag list heading -->
+            <div class="bottom-line"></div>
+            <!--START : shopping bag list rows -->
+
+            <!--<div class="shopping-bag-list-row" id="item-index-0">
+                <div class="shopping-bag-col-first">
+                    <div class="item-detail">
+                        <div class="item-detail-image">
+                            <img src="images/one.jpg"  alt="t-shirt">
+                        </div>
+                        <div class="item-detail-title">
+                            Solid white cotton t shirt
+                        </div>
+                        <div class="item-detail-content">
+                            Style # 124#623@13
+                        </div>
+                        <div class="item-detail-content">
+                            Colour : White
+                        </div>
+                        <div class="item-detail-content show-mob">
+                            Size : S
+                        </div>
+                        <div class="item-detail-content show-mob bld">
+                           QTY : <input type="text" alt="Item quantity" class="quantity-text" aria-label="quantity">
+                        </div>
+                        <div class="item-detail-content show-mob bld">
+                            $100
+                        </div>
+                        <div class="item-detail-actions">
+                            <a href="#">edit</a> | <a href="#">X Remove</a> | <a href="#"> save for later</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shopping-bag-col">
+                    4
+                </div>
+                <div class="shopping-bag-col">
+                    <input type="text" alt="Item quantity" class="quantity-text" aria-label="quantity">
+                </div>
+                <div class="shopping-bag-col">
+                    $100
+                </div>
+            </div> 
+<div class="top-line"></div>               
+-->
+            <!--END : shopping bag list rows -->
+
+        </div>
+        <!-- shopping bag footer -->
+        <footer>
+            <div class="footer-info">
+                <p> Need a help <br>or have a question?</p>
+                <p> Call customer service at <br> 1-800-555-4444</p>
+                <p><a href="#">Chat with one of <br> our stylelsit</a></p>
+                <p><a href="#">See returns & <br>exchange policy</a></p>
+            </div>
+            <div class="footer-checkout">
+                <div class="promo-code">
+                    <div class="promo-code-label">
+                        Enter Promotion Code <br>or Gift card
+                    </div>
+                    <div class="promo-code-controls">
+                        <input type="text" id="promoCodeTxt" class="promo-code-input" aria-label="Promo Code" />
+                        <input type="button" id="applyPromoCode" value="Apply" class="promo-code-button" />
+                    </div>
+                </div>
+                <div class="top-line show-mob"></div>
+                <div class="bottom-line show-des"></div>
+                <div class="estimation-details">
+                    <div class="estimation-text">
+                        Sub Total
+                        <span class="estimation-sub-text">
+                                $100
+                            </span>
+                    </div>
+                    <div class="estimation-text">
+                        Promotion Code TEST applied
+                        <span class="estimation-sub-text">
+                                $10
+                            </span>
+                    </div>
+                    <div class="estimation-text">
+                        Estimated Shipping
+                        <span class="estimation-sub-text">
+                                Free
+                            </span>
+                        <span class="estimation-text-info">You qualify for free shiping <br> because your order is over $500</span>
+                    </div>
+                    <div class="top-line"></div>
+                    <div class="estimation-text">
+                        Estimated Total
+                        <span class="estimation-sub-text">
+                                $90
+                            </span>
+                        <span class="estimation-text-info">Tax will be applied during checkout</span>
+                    </div>
+                </div>
+                <div class="bottom-line show-des"></div>
+                <div class="footer-checkout-actions">
+                    <a href="#" class="continue-shopping"> Continue Shopping</a>
+                    <input type="button" id="checkout" value="checkout" class="checkout-button" />
+                </div>
+                <div class="clear-both"></div>
+                <div class="footer-checkout-note">
+                    <p>
+                        <i class="fa fa-lock show-des"></i> Secure checkout. Shopping is always secure & safe.
+                        <i class="fa fa-lock show-mob"></i>
+                    </p>
+
+                </div>
+            </div>
+        </footer>
+
+        <!-- Edit overlay -->
+        <div class="modal-box" id="modal-box">
+            <i class="fa fa-times" aria-hidden="true"></i>
+            <div class="modal-box-content">
+                <div class="modal-box-content-text">
+                    <div class="bottom-line"></div>
+                    <div class="modal-box-content-title"> Paislely Jean</div>
+                    <div class="modal-box-content-price"> $21</div>
+                    <div class="modal-box-content-colour">
+                        <span class="colour-title">
+                                PAISLEY
+                        </span>
+                        <span class="colour-box beige"></span>
+                        <span class="colour-box darkolivegreen"></span>
+                    </div>
+                    <div class="modal-box-content-size-section">
+                        <select name="modal-box-content-size" class="modal-box-content-size">
+                                <option value="s">S</option>
+                                <option value="m">M</option>
+                                <option value="l">L</option>
+                                <option value="xl">Xl</option>
+                            </select>
+                        <select name="modal-box-content-qty" class="modal-box-content-qty">
+                                 <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                    </div>
+                    <div class="modal-box-addtobag">
+                        <input type="button" value="Add to Bag">
+                    </div>
+                    <a href="#" class="see-product-details">see product details</a>
+                </div>
+                <div class="modal-box-content-image">                    
+                    <img src="images/1.jpg" alt="T-shirt" class="modal--image" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js" type="application/javascript"></script>
+</body>
+</html>

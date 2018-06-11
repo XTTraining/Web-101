@@ -1,0 +1,131 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <!-- <link rel="stylesheet" type="text/css" href="vendors/css/grid.css"> -->
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
+    <title>Shopping cart</title>
+</head>
+
+<body>
+    <div class="container">
+        <section class="section-heading">
+            <div class="row heading">
+                <h1>Your Shopping Bag</h1>
+            </div>
+        </section>
+        <section class="section-shopping-cart">
+            <!--productlist-->
+            <div class="row tpc">
+                <div class="thead1">
+                    Items
+                </div>
+                <div class="thead2">
+                    Size
+                </div>
+                <div class="thead3">
+                    Qty
+                </div>
+                <div class="thead4">
+                    Price
+                </div>
+            </div>
+            <hr/>           
+            <!-- <div style="clear:both"></div> -->
+        </section>
+        <section class="section-costing">
+            <div class="row">
+                <aside class="contact-detail">
+                    <ul class="links">
+                        <li>
+                            <strong>Need any hep or have questions?</strong>
+                        </li>
+                        <li>Call Customer Service at 1-1800-5555</li>
+                        <li>
+                            <a href="#">Chat with our stylists</a>
+                        </li>
+                        <li>
+                            <a href="#">See return & exchange policy</a>
+                        </li>
+                    </ul>
+                </aside>               
+                <div class="final-payment">
+                    <div class="promo-container">
+                        <div class="promo-heading">Enter Promotion Code or gift card</div>
+                        <input type="text" name="promocode" id="promocode" placeholder="Your Promo code" class="promocode">
+                        <button class="btn" id="btnApply">Apply</button>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr/>
+                    <div class="calculation-container">
+                        <div class="subtotal-title">SubTotal</div>
+                        <div class="subtotal">
+                            <span class="currency_symbol">$</span>
+                            <span class="subtotal_amount"></span>
+                        </div>
+                    </div>
+                    <div class="appliedpromo-container">
+                        <div class="promotion-title">Promotion code
+                            <span class="code"></span> Applied
+                        </div>
+                        <div class="applied-promotion">
+                            -&nbsp;
+                            <span class="currency_symbol">$</span>
+                            <span class="promo_amount"></span>
+                        </div>
+                    </div>
+                    <div class="shipping-container">
+                        <div class="shipping-title">
+                            <p>Estimated Shipping*</p>
+                            <p class="fpt1">You qualify for free shipping because your order is above
+                                <span class="currency_symbol">$</span>50.
+                            </p>
+                        </div>
+                        <div class="shipping">
+                            <span>FREE</span>
+                        </div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr/>
+                    <div class="finaltotal-container">
+                        <div class="finaltotal-heading">
+                            <p>Estimated Total</p>
+                            <p class="fpt1">Tax will be applied during checkout</p>
+                        </div>
+                        <div class="finaltotal">
+                            <span class="currency_symbol">$</span>
+                            <span class="final_amount"></span>
+                        </div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr/>
+                    <div class="buttons">
+                        <button class="btn">Continue Shopping</button>
+                        <button class="btn btn-full">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Some text in the Modal..</p>
+        </div>
+      
+    </div>
+    <div id="errorModal" class="errModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p></p>
+          </div>
+    </div>
+    <script src="resources/js/script.js"></script>
+</body>
+
+</html>

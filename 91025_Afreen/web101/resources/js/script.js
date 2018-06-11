@@ -22,6 +22,11 @@ var productController = (function () {
         },
         getCoupons: function () {
             return JSON.parse(jsonCoupons);
+        },
+        getProductById: function(pid) {
+            var item= (JSON.parse(jsonData).products.filter(function(a) { return a.id === pid}))[0];
+            //console.log(item);
+            return item;
         }
     }
 })();
@@ -77,13 +82,13 @@ var cartController = (function () {
             //data.discount.value = parseInt(value);
             //console.log(data.discount.value);
             discountedAmount = (parseInt(data.discount.value) / 100) * data.subTotal;
-            discountedAmount = discountedAmount.toFixed(2);
+            //discountedAmount = discountedAmount.toFixed(2);
         } else {
             data.discount.value = parseInt(value);
             discountedAmount = data.discount.value.toFixed(2);
         }
-
-        data.discount.discountedAmount = discountedAmount;
+        discountedAmount > 0? data.discount.discountedAmount = discountedAmount.toFixed(2): data.discount.discountedAmount=discountedAmount ;
+        
         //data.finalAmount = data.subTotal - discountedAmount;
         var amount = data.subTotal - discountedAmount;
         amount > 0? data.finalAmount = amount.toFixed(2) : data.finalAmount = amount;        
@@ -144,6 +149,12 @@ var cartController = (function () {
         {
             return Object.keys(data.cartItems).length;            
         }
+        //,
+        // getItemById: function(iid) {
+        //     var item= data.cartItems.filter(function(a) { return a.id === iid})[0];
+        //     //console.log(item);
+        //     return item;
+        // }
     }
 })();
 
@@ -165,7 +176,7 @@ var UIController = (function () {
             var html, newhtml, element;
 
             cartItems.forEach(function (obj, index) {
-                console.log(typeof (obj.itemTotalPrice));
+                //console.log(typeof (obj.itemTotalPrice));
                 html = '<div class="row item-row" id="item-%id%"><div class="col1"><div class="col-cnt"><div class="item-thumbnail"><img src="%item_thumbnail%" alt="%title%"></div><div class="item-detail"><div class="item-desc"><p class="item-name"> %title% </p><label>Style #:</label><span class="style">%style%</span><br/><label>Colour:</label><span class="color">%color%</span></div><div class="item-links"><ul class="links"><li><a href="#" class="edit" id="edit">Edit</a>&nbsp;&nbsp;|<li><a href="#" id="remove">Remove</a> &nbsp;&nbsp;|</li><li><a href="#">Save for later</a></li></ul></div></div></div></div><div class="col2"><div class="col-cnt size"><p>%size%</p></div></div><div class="col3"><div class="col-cnt quantity"><p>%quantity%</p></div></div><div class="col4"><div class="col-cnt price"><span class="currency_symbol">$</span><span class="price">%price%</span></div></div></div>';
                 newhtml = ''; //clear string <hr/>
 
@@ -251,9 +262,10 @@ var appController = (function (productCtrl, cartCtrl, uiCtrl) {
         document.querySelector(DOM.sectionCart).addEventListener('click', ctrlEditOrDeleteItem);
 
         //closing edit modal
-        document.querySelector('.modal .close').addEventListener('click', function () {
+        document.querySelector('.modal .close').addEventListener('click', function (event) {            
             document.querySelector('.modal').style.display = 'none';
         });
+
         //closing error modal        
         document.querySelector('.errModal .close').addEventListener('click', function () {
             document.querySelector('.errModal').style.display = 'none';
@@ -267,9 +279,11 @@ var appController = (function (productCtrl, cartCtrl, uiCtrl) {
     }
 
     var ctrlEditOrDeleteItem = function (event) {
-        var itemID, splitID, type, ID,total,count;        
-        itemID= event.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.id; //need to find optimized way
-        
+        var itemID, splitID, type, ID,total,count, editItem;
+        editItem='';        
+        itemID= event.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.id; //need to find optimized way       
+        //console.log(event.target.id);
+
         if (itemID && event.target.id == "remove") {
 
             //item-1
@@ -297,10 +311,37 @@ var appController = (function (productCtrl, cartCtrl, uiCtrl) {
            
         }
         if (itemID && event.target.id == "edit") {
-            document.querySelector('.modal p').textContent = "Edit to be implemented";
-            document.querySelector('.modal').style.display = 'block';
+            //Clear row before opening edit window for another item
+            var elem = document.querySelector('.modal .row');
+            //console.log(elem);
+            if(elem !== null) { elem.parentNode.removeChild(elem) }
+            //item-1
+            splitID = itemID.split('-');            
+            ID = parseInt(splitID[1]);
+            editItem=''
+            editItem= productCtrl.getProductById(ID);//cartCtrl.getItemById(ID);
+            openEditOverlay(editItem);                        
         }
-    };    
+    };
+    
+    function openEditOverlay(item) {        
+        var editHtml='<div class="row"><div class="editoverlay-detail"><p class="item-name">%title%</p><label>Size :</label><span class="size">%size%</span><div class="editoverlay-price"><span class="currency_symbol">$</span><span class="price">%price%</span></div></div><div class="editoverlay-image"><img src="%mainimage%" alt="%title%"></div></div>';
+        var newHtml='';
+        //Replace tokens        
+        newHtml = editHtml.replace('%mainimage%', item.mainimage);
+        newHtml = newHtml.replace(new RegExp('%title%', 'gi'), item.title);        
+        newHtml = newHtml.replace('%size%', item.size);        
+        newHtml = newHtml.replace('%price%', item.unitprice);
+        //console.log(newHtml);
+        document.querySelector('.modal .modal-content').insertAdjacentHTML('beforeend', newHtml);
+
+        document.querySelector('.modal p').textContent = "Edit to be implemented further...";
+        document.querySelector('.modal').style.display = 'block';
+    }
+    
+    function Close() {        
+        document.body.removeChild(document.getElementById("myModal"));
+    }
 
     var generateMockCart = function() {
         //1. Get product item from json (mock)

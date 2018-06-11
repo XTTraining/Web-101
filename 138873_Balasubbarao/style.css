@@ -1,0 +1,525 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #151512;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #fff;
+}
+
+/* ####### common ##############*/
+
+.bottom-line,
+.top-line {
+    width: auto;
+    overflow: hidden;
+}
+
+.bottom-line {
+    border-bottom: 5px solid #D2D2D2;
+}
+
+.top-line {
+    border-top: 1px solid #D2D2D2;
+
+}
+
+.clear-both {
+    clear: both;
+}
+
+/* ######## Container ####### */
+
+.container {
+    width: auto;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.show-mob {
+    display: none;
+}
+
+.show-des {
+    display: block;
+}
+
+.bld {
+    font-weight: 600 !important;
+    margin: 5px 0 5px 0;
+}
+
+/* ######## input types ########*/
+
+.quantity-text {
+    width: 20px;
+    text-align: center;
+}
+
+input {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+/* ######## Shopping bag common####### */
+
+header,
+.shopping-bag-list,
+.shopping-bag-list-heading,
+.shopping-bag-list-row {
+    width: auto;
+    display: block;
+}
+
+header {
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    letter-spacing: 4px;
+}
+
+.shopping-bag-list-heading,
+.shopping-bag-list-row {
+    display: flex;
+}
+
+.shopping-bag-list-row {
+    margin: 15px 0px 30px 0px;
+}
+
+.shopping-bag-col,
+.shopping-bag-col-first {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 5px;
+    float: left;
+    position: relative;
+    margin: 5px;
+}
+
+.shopping-bag-col-first {
+    width: 50%;
+}
+
+.shopping-bag-col {
+    width: 15%;
+    text-align: right;
+}
+
+/* ########### Shopping bag items ############### */
+
+.item-detail img {
+    width: 120px;
+    height: 120px;
+    float: left;
+    margin-right: 50px;
+}
+
+.item-detail-content,
+.item-detail-title {
+    font-size: 14px;
+    font-weight: 100;
+    text-transform: none;
+}
+
+.item-detail-title {
+    text-transform: inherit;
+    font-weight: 600;
+}
+
+.item-detail-actions {
+    padding-top: 50px;
+}
+
+.item-detail-actions a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 100;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+/* ########### Shopping bag footer ############### */
+
+footer {
+    margin-top: 50px;
+    display: flex;
+}
+
+/* START: information text - left side*/
+
+.footer-info {
+    width: 25%;
+    float: left;
+}
+
+.footer-info p {
+    font-size: 13px;
+    width: 100px;
+    padding-bottom: 11px;
+}
+
+.footer-info p a {
+    color: inherit;
+}
+
+/* END: information text - left side*/
+
+/* START: Checkout - right side*/
+
+.footer-checkout {
+    width: 75%;
+}
+
+.promo-code {
+    padding-bottom: 25px;
+    display: flex;
+}
+
+.promo-code-label {
+    text-transform: uppercase;
+    font-size: 16px;
+    width: 30%;
+}
+
+.promo-code-input {
+    height: 25px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+.promo-code-button {
+    height: 25px;
+    padding: 0 10px 0 10px;
+}
+
+.promo-code-controls {
+    text-align: right;
+    width: 70%;
+}
+
+.estimation-text {
+    width: 100%;
+    margin: 20px 0 20px 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+
+.estimation-text .estimation-sub-text {
+    float: right;
+}
+
+.estimation-text .estimation-text-info {
+    text-transform: none;
+    font-size: 12px;
+    display: block;
+    font-weight: 200;
+}
+
+.footer-checkout-actions,
+.footer-checkout-note {
+    float: right;
+    margin: 15px 0 15px 0;
+}
+
+.footer-checkout-actions a {
+    text-transform: uppercase;
+    color: inherit;
+    padding-right: 20px;
+    font-size: 15px;
+}
+
+.footer-checkout-actions input[type=button],
+.modal-box-addtobag input[type=button] {
+    height: 25px;
+    padding: 0 13px 0 13px;
+    border: 0px;
+    background-color: #045FB4;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.footer-checkout-note p {
+    font-size: 13px;
+    display: flex;
+}
+
+.fa-lock {
+    color: #F9A602;
+    font-size: 20px;
+    padding-right: 5px;
+}
+
+/* END: Checkout - right side*/
+
+/* Overaly box*/
+
+.modal-box {
+    position: fixed;
+    top: 10%;
+    left: 30%;
+    width: 40%;
+    height: 450px;
+    z-index: 10;
+    outline: 9999px solid rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    display: none;
+
+}
+
+.fa-times {
+    color: gray;
+    font-size: 45px;
+    -webkit-text-stroke: 6px white;
+    position: relative;
+    float: right;
+}
+
+.modal-box-content {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    float: left;
+    display: flex;
+    text-align: center;
+
+}
+
+.modal-box-content-text,
+.modal-box-content-image {
+    width: 50%;
+    height: 100%
+}
+
+.modal-box-content-image img {
+    height: 250px;
+    width: 200px;
+    margin: 42px;
+}
+
+.modal-box-content-text {
+    margin-top: 40px;
+}
+
+.modal-box-content-text .modal-box-content-title {
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.modal-box-content-text .modal-box-content-price {
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.modal-box-content-colour {
+    margin-top: 15px;
+}
+
+.modal-box-content-colour .colour-title {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.modal-box-content-colour .colour-box {
+    margin-left: 5px;
+    border: 1px solid gray;
+    width: 30px;
+    height: 15px;
+    content: "";
+    padding: 0 10px 0 10px;
+}
+
+.modal-box-content-colour .colour-box.beige {
+    background-color: beige;
+}
+
+.modal-box-content-colour .colour-box.darkolivegreen {
+    background-color: darkolivegreen;
+}
+
+.modal-box-addtobag input[type=button] {
+    font-size: 20px;
+    height: 40px;
+    padding: 5px 25px 5px 25px;
+    margin-top: 25px;
+}
+
+.see-product-details {
+    font-size: 14px;
+    color: inherit;
+}
+
+.modal-box-content-size-section {
+    display: block;
+    margin-top: 20px;
+}
+
+.modal-box-content-size-section select {
+    width: 70px;
+    padding: 5px 35px 5px 5px;
+    font-size: 16px;
+    margin-left: 15px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(images/down-arrow.png) 85% / 15% no-repeat #fff;
+}
+
+/* #######  Media quries for mobile #########*/
+
+@media (max-width: 480px) {
+
+    .show-mob {
+        display: block;
+    }
+    .show-des {
+        display: none;
+    }
+    .container {
+        width: auto;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    header {
+        font-size: 15px;
+        letter-spacing: 0px;
+        margin-bottom: 10px;
+    }
+    .header-total-items {
+        float: right;
+        margin-right: 9px;
+    }
+
+    /* shoppig bag list */
+    .shopping-bag-list-heading,
+    .shopping-bag-col,
+    .footer-info {
+        display: none;
+    }
+    .shopping-bag-col-first {
+        width: 100%;
+    }
+    .shopping-bag-list-row {
+        margin: 15px 0px 15px 0px;
+    }
+    .item-detail img {
+        width: 100px;
+        height: 110px;
+        margin-right: 30px;
+    }
+
+    .item-detail-title {
+        font-size: 11px;
+    }
+
+    .item-detail-actions {
+        text-align: center;
+        padding-top: 20px;
+
+    }
+    .item-detail-actions a {
+        margin: 0 15px 0 15px;
+    }
+
+
+    /* Promo code*/
+    footer {
+        margin-top: 10px;
+    }
+    .footer-checkout {
+        width: 100%;
+    }
+
+    .promo-code {
+        display: block;
+    }
+
+    .promo-code .promo-code-label,
+    .promo-code .promo-code-controls {
+        text-transform: uppercase;
+        font-size: 14px;
+        text-align: center;
+        width: 100%;
+    }
+    .promo-code-input {
+        height: 25px;
+        margin-right: 10px;
+        width: 150px;
+    }
+    .estimation-details {
+        margin: 0 15px 0 15px;
+    }
+    .estimation-text {
+        font-size: 12px;
+    }
+    .footer-checkout-actions {
+        text-align: center;
+        width: 100%;
+    }
+    .footer-checkout-actions a {
+        position: relative;
+        display: block;
+        top: 60px;
+        padding-right: 0px;
+        font-size: 14px;
+    }
+    .footer-checkout-actions input[type=button] {
+        padding: 0 50px 0 50px;
+    }
+    .footer-checkout-note {
+        width: 100%;
+        text-align: center;
+        margin-top: 40px;
+    }
+    .footer-checkout-note p {
+        margin: 0 27% 0 27%;
+        display: block;
+    }
+    .modal-box {
+        left: 5%;
+        width: 90%;
+    }
+    .fa-times {
+        font-size: 25px;
+    }
+    .modal-box-content {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;      
+    }
+    .modal-box-content-image img {
+        height: 150px;
+        width: 100px;
+        margin: 40px;
+    }
+
+    .modal-box-content-text .modal-box-content-title {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    .modal-box-content-text .modal-box-content-price {
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    .modal-box-content-size-section select {
+        width: 56px;
+        padding: 5px 35px 5px 5px;
+        font-size: 16px;
+        margin-left: 3px;
+    }
+}
+
+/* #### End Mobile ##############*/

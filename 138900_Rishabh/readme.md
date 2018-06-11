@@ -4,3 +4,5 @@
 ### 2. data folder contains the json for feeding item data.
 ### 3. items.json contains the data to populate initial cart items.
 ### 4. stockitems.json contains data like "all available colors of items, all available sizes of items".
+### 5. Once all items are removed from cart, cookie needs to be removed/ or browser has to be changed in order populate items again.
+### 6. Use: TEN or FIFTY as promocode.

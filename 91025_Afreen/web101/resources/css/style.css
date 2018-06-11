@@ -324,7 +324,7 @@ hr:last-of-type{
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
+/* Commaon Modal Content/Box styling*/
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
@@ -346,4 +346,46 @@ hr:last-of-type{
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Edit overlay styling*/ 
+#myModal .modal-content{
+    width: 50%;
+}
+
+.modal-content .editoverlay-detail{
+    float:left;
+    position: relative;
+    width:50%;
+}
+.editoverlay-image {
+    float:left;
+    position: relative;
+    width:50%;
+}
+.editoverlay-image img {
+    position: relative;
+    width:90%;
+    height: auto;
+}
+.editoverlay-detail {
+    /* display:block;
+    font-weight: bold; */
+    text-transform: uppercase;
+    margin: 2% 20% auto auto;
+    padding-bottom: 2px;
+}
+.editoverlay-detail p{
+    margin-bottom:15px;
+}
+.editoverlay-price {
+    margin-top:20px;
+}
+
+.editoverlay-price span{
+    /* display: block; */
+    font-size: 40px;    
+}
+.editoverlay-price .price {
+    font-weight: 400;
 }

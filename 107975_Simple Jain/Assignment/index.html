@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Shopping</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+              
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic,700' rel='stylesheet' type='text/css'>
+        
+    </head>
+    <body>
+
+        <header>
+            <div class="row">
+                <h1>Your shopping bag</h1>
+            </div>
+        </header>
+         <section style="position: relative">
+            <div class="row product-header">
+                <div class="col span-3-of-12 itemCount">
+                    <strong>3</strong><span> Items</span>
+                </div>
+
+                <div class="col span-9-of-12 headerDesktop">
+                    <div class="col span-3-of-6">
+
+                    </div>
+                    <div class="col span-1-of-6">
+                        <span>Size</span>
+                    </div>
+                    <div class="col span-1-of-6">
+                        <span>Qty</span>
+                    </div>
+
+                    <div class="col span-1-of-6" style="text-align: right">
+                        <span>Price</span>
+                    </div>
+                </div>
+            </div> 
+            <div class="row">
+                <ul>
+                    <li class="clearfix">
+                        <div class="productBorder" id="product-1">
+                            <div class="col span-3-of-12">
+                                <a href="#"><img src="resources/img/t-shirt-2.jpg" alt="product 1" class="product" /></a>
+                            </div>
+                            
+                            <div class="col span-9-of-12" style="padding-left: 20px">
+                                <div class="col span-3-of-6"  style="float: left">
+                                    <div class="prod-name"><a href="#">Maui T-Shirt for Men - Moana</a></div>
+                                    <div class="prod-sytle">Style #: MS13KT1906</div>
+                                    <div class="prod-color">Color: Grey</div>
+                                </div>
+                                <div class="col span-1-of-6 product-size"  style="float: left">
+                                    <span class="lblMobile">Size:&nbsp;</span><span> S</span>
+                                </div>
+                                <div class="col span-1-of-6 qtyBlock">
+                                    <label for="txtQty1" class="lblMobile">Qty:&nbsp;</label>
+                                    <input type="text" id="txtQty1" class="quantity" />
+                                </div>
+
+                                <div class="col span-1-of-6">
+                                    <p class="product-price"><span>$</span>11.00</p>
+                                </div>
+                            </div>
+
+
+                            <div class="col span-9-of-12 btnAction">
+                               <ul class="productButton">
+                                    <li style="float: left">
+                                        <a class="btn-edit" href="#" id="btnProductEdit">Edit</a>
+                                    </li>
+                                   <li  style="float: left;margin-left: 10px;">
+                                       <a class="btn-remove" href="#">x Remove</a>
+                                   </li>
+                                   <li   style="float: left;margin-left: 10px;">
+                                       <a class="btn-save" href="#">Save for later</a>
+                                   </li>
+                                </ul> 
+                            </div>
+
+                        </div>
+                    </li>
+                     <li>
+                        <div class="productBorder" id="product-2">
+                            <div class="col span-3-of-12" style="float: left">
+                                <a href="#"><img src="resources/img/t-shirt-1.jpg" alt="product 2" class="product" /></a>
+                            </div>
+                            
+                            <div class="col span-9-of-12" style="padding-left: 20px">
+                                <div class="col span-3-of-6"  style="float: left">
+                                    <div class="prod-name"><a href="#">Moana V-Neck T-Shirt for Women</a></div>
+                                    <div class="prod-sytle">Style #: MS13KT1906</div>
+                                    <div class="prod-color">Color: Grey</div>
+                                </div>
+                                <div class="col span-1-of-6 product-size"  style="float: left">
+                                    <span class="lblMobile">Size:&nbsp;</span><span> S</span>
+                                </div>
+                                <div class="col span-1-of-6 qtyBlock">
+                                    <label for="txtQty2" class="lblMobile">Qty:&nbsp;</label>
+                                    <input type="text" id="txtQty2" class="quantity" />
+                                </div>
+
+                                <div class="col span-1-of-6">
+                                    <p class="product-price"><span>$</span>11.00</p>
+                                </div>
+                            </div>
+
+                            <div class="col span-9-of-12 btnAction">
+                               <ul>
+                                    <li style="float: left">
+                                        <a class="btn-edit" href="#" id="btnProductEdit" >Edit</a>
+                                    </li>
+                                   <li style="float: left;margin-left: 10px;">
+                                       <a class="btn-remove"  href="#">x Remove</a>
+                                   </li>
+                                   <li style="float: left;margin-left: 10px;">
+                                       <a class="btn-save"  href="#">Save for later</a>
+                                   </li>
+                                </ul> 
+                            </div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="productBorder" id="product-3">
+                            <div class="col span-3-of-12" style="float: left">
+                                <a href="#"><img src="resources/img/t-shirt-3.jpg" alt="product 2" class="product" /></a>
+                            </div>
+                            
+                            <div class="col span-9-of-12" style="padding-left: 20px">
+                                <div class="col span-3-of-6"  style="float: left">
+                                    <div class="prod-name"><a href="#">Fifth Sun Moana Men's Maui All Awesome T-Shirt </a></div>
+                                    <div class="prod-sytle"><span>Style #: MS13KT1906</span></div>
+                                    <div class="prod-color"><span>Color: Grey</span></div>
+                                </div>
+                                <div class="col span-1-of-6 product-size"  style="float: left">
+                                    <span class="lblMobile">Size:&nbsp;</span><span> S</span>
+                                </div>
+                                <div class="col span-1-of-6 qtyBlock">
+                                    <label for="txtQty3" class="lblMobile">Qty:&nbsp;</label>
+                                    <input type="text" id="txtQty3" class="quantity" />
+                                </div>
+
+                                <div class="col span-1-of-6">
+                                    <p class="product-price"><span>$</span>23.94</p>
+                                </div>
+                            </div>
+
+                            <div class="col span-9-of-12 btnAction">
+                               <ul>
+                                    <li style="float: left">
+                                        <a class="btn-edit"  href="#" id="btnProductEdit">Edit</a>
+                                    </li>
+                                   <li style="float: left;margin-left: 10px;">
+                                       <a class="btn-remove"  href="#">x Remove</a>
+                                   </li>
+                                   <li  style="float: left;margin-left: 10px;">
+                                       <a class="btn-save" href="#">Save for later</a>
+                                   </li>
+                                </ul> 
+                            </div>
+
+                        </div>
+                    </li> 
+                </ul>
+            </div>
+        </section>
+ 
+        <section>
+             <div class="row divInvoice">
+                <div class="col span-3-of-12 customer-help" >
+                    <h4>Need help or have questions?</h4>
+                    <p>Call Customer Service at <a href="tel:1-800-555-5555" style="white-space: nowrap">1-800-555-5555</a></p>
+                    <div><a href="#">Chat with one of our stylists</a></div>
+                    <div><a href="#">See return &amp; exchange policy </a></div>
+                </div>
+                <div class="col span-1-of-12">
+                      
+                 </div>
+                <div class="col span-8-of-12 productCalculation">
+                    <div class="productPromotion clearfix">
+                        <div class="col span-4-of-12">
+                            <p>
+                                <label for="txtPromotion">Enter promotion code OR gift card</label>
+                            </p>
+                        </div>
+                        <div class="col span-1-of-12"></div>
+                        <div class="col span-5-of-12 promotionInput">
+                            <input id="txtPromotion">
+                        </div>
+                        <div class="col span-2-of-12 promotionBtn">
+                            <button id="btnApply" class="btn btnApply">Apply</button>
+                        </div>
+                    </div>
+                    <div class="productValues">
+                        <div class="productSubtotal">
+                            <div class="col span-9-of-12">
+                                <p>Subtotal</p>
+                            </div>
+                            <div class="col span-3-of-12 colRight">
+                                <p><span>$</span>37.00  </p>
+                            </div>
+                        </div>
+                        <div class="productPromotionCode clearfix">
+                            <div class="col span-9-of-12">
+                                <p>Promotion Code <strong>JF10</strong> Applied</p>
+                            </div>
+                            <div class="col span-3-of-12 colRight">
+                                <p><span>-</span><span>$</span>7.00  </p>
+                            </div>
+                        </div>
+                        <div class="productShipping clearfix">
+                            <div class="col span-9-of-12">
+                                <p>Estimated Shipping<superscipt>*</superscipt></p>
+                                <p class="productShippingDisclaimer">You qualify for free shipping because your order is over $50<superscipt>*</superscipt> </p>
+                            </div>
+                            <div class="col span-3-of-12 colRight">
+                                <p>FREE</p>
+                            </div>
+                        </div>
+                    
+                        <div class="productTotal clearfix">
+                            <div class="col span-9-of-12">
+                                <p>Estimated Total</p>
+                                <p class="productEstimationDisclaimer">Tax will be applied during checkout</p>
+                            </div> 
+                           <div class="col span-3-of-12 colRight">
+                                <p><sup>$</sup>30.00  </p>
+                            </div>
+                        </div>
+                        <div class="divShopping">
+                            <div class="col span-9-of-12 lnkShopping">
+                                <a href="#">Continue Shopping</a>
+                            </div>
+                            <div class="col span-3-of-12 divCheckOut">
+                                <button class="btn btnCheckOut">Checkout</button>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float: right" class="divSecurityDisclaimer">
+                                 <p style="float: right">Secure checkout. Shopping is always safe &amp; secure</p>
+                                 <img src="resources/img/secure.jpg" class="imgSecure">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </section> 
+        
+        <div id="overlay" style="display: none">
+            <div style="width:80%;margin:5% 10%;height:90%;background-color: #fff">
+                <div style="text-align: right;font-size: 300%;padding-right: 20px">
+                    <a href="#" id="btnClose" style="text-decoration: none">X</a>
+                </div>
+                <div style="width:80%;margin:0 auto">
+                    <div style="width:100%">
+                        <div class="col span-1-of-2 clearfix">
+                            <p style="text-transform: uppercase;font-size:150%">Moana V-Neck T-Shirt for Women</p>
+                            <span>$21</span>
+                            <p style="text-transform: uppercase;font-size:150%;padding-top:50px">Paisley</p>
+                            <div class="fillcolor light"></div>
+                            <div class="fillcolor dark"></div>
+                            <div style="float: left;width:100%;padding-bottom: 20px;padding-top: 20px"> 
+                                <select>
+                                    <option value="">SIZE</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                </select> 
+                                <select>
+                                    <option value="1">QTY: 1</option>
+                                    <option value="2">QTY: 2</option>
+                                    <option value="3">QTY: 3</option>
+                                    <option value="4">QTY: 4</option>
+                                </select> 
+                            </div>
+                            <div style="padding-bottom: 20px">
+                                <button class="btn btnCheckOut">EDIT</button>
+                            </div>
+                            <div>
+                                <a href="#">See product details</a>
+                            </div>
+                        </div>
+                        <div class="col span-1-of-2 clearfix">
+                            <img id="imgEditOverlay" style="width:100%" src="resources/img/t-shirt-1.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+           
+        <script src="resources/js/script.js"></script>
+        
+           
+    </body>
+</html>

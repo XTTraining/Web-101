@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shopping Cart Website which gives you variety of products to buy online.">
 
     <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
@@ -13,21 +15,21 @@
     <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
 
+
     <title>Shopping Bag</title>
 </head>
 
 <body>
+
     <!--Edit Modal Pop Up-->
     <div id="overlay"></div>
     <div id="editpopup" role="group">
         <div id="editcontainer">
-           
-
             <div class="row">
                 <form role="form" id="editForm" type="post">
                     <input type="hidden" id="edit_code">
-                     <span id="popupclose" class="close">&times;</span>
-                  
+                    <span id="popupclose" class="close">&times;</span>
+
                     <div class="col span-6-of-12 edit-details">
 
 
@@ -48,34 +50,34 @@
 
 
                         <div class="row edit_dropdown">
-                           
-                                <select id="edit_size" placeholder="SIZE">
+
+                            <select id="edit_size" placeholder="SIZE">
                                 <option value="" selected>SIZE</option>
                                    <option value="S">S</option>
                                    <option value="M">M</option>
                                    <option value="L">L</option>
                                     </select>
 
-                            
-                                 <select id="edit_qty" placeholder="QTY">
+
+                            <select id="edit_qty" placeholder="QTY">
                                    <option value="">QTY</option>
                                    <option value="1" selected>QTY:1</option>
                                    <option value="2">QTY:2</option>
                                    <option value="3">QTY:3</option>
                                 </select>
-                           
+
                         </div>
 
                         <div><button role="button" id="editSubmit" class="btn-blue">EDIT</button></div>
                         <div class=" edit_footer">See product details</div>
 
                     </div>
-                  
-                    <div class="col span-5-of-12" class="edit_image" >
-                       <!-- <img src="resources/img/blue-shirt.jpg" alt="" id="edit_image">-->
-                         <img src="" alt="" id="edit_image">
+
+                    <div class="col span-5-of-12" class="edit_image">
+                        <!-- <img src="resources/img/blue-shirt.jpg" alt="" id="edit_image">-->
+                        <img src="" alt="" id="edit_image">
                     </div>
-                   
+
                 </form>
 
 
@@ -112,9 +114,9 @@
             <div class="box_shopping_cart">
                 <!--  Cart Items Container    -->
 
-
             </div>
         </div>
+
     </section>
 
     <section role="group">
@@ -149,14 +151,16 @@
 
                     <div class="col span-8-of-12 promo">
                         <div class="row">
-                        <input type="text" id="promo-code" min="4" maxlength="4">
-                        <input type="text" id="btn-promo-apply" value="APPLY" readonly>
-                        <span id="promocode-message"></span>
-                            </div>
+                            <input type="text" id="promo-code" min="4" maxlength="4">
+                            <input type="text" id="btn-promo-apply" value="APPLY" readonly>
+                            <span id="promocode-message"></span>
+                        </div>
                     </div>
                 </div>
+
+
                 <div class="row shopping-bill item box_shopping_cart_item">
-                    <div class="col span-3-of-8 section-billing section-billing-list">
+                    <div class="col span-4-of-8 section-billing section-billing-list">
                         <div>SubTotal</div>
                         <div class="promo_row_text">Promotion Code&nbsp;<span id="promcode_applied"></span>Applied</div>
                         <div>Estimated Shipping*
@@ -175,11 +179,11 @@
                     </div>
                 </div>
                 <div class="row item-border final-bill_row">
-                    <div class="col span-1-of-2">
+                    <div class="col span-4-of-8">
                         <div class="total_text">Estimated Total</div>
                         <span class="billing_text_info">Tax will be applied during checkout</span>
                     </div>
-                    <div class="col span-1-of-2">
+                    <div class="col span-4-of-8 pull-right">
                         <div class="final-bill"><sup>$</sup><span id="totalBill">0</span></div>
                     </div>
                 </div>
@@ -190,12 +194,7 @@
                     </p>
                 </div>
                 <div class="row">
-                   
-                   
-                  
-                    <i class="icon icon-lock"></i>
-                    <p class=" text-muted footer">
-                    Secure checkout. Shopping is always safe and secure</p>
+                    <p class=" text-muted footer"><img src="resources/img/lockimage.jpg"> Secure checkout. Shopping is always safe and secure</p>
                 </div>
             </div>
 

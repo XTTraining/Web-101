@@ -14,16 +14,17 @@ Implemented functionality
 	c.Promocode discount value is $7
 
 
-
 2. Delete functionality
 
 3. Shopping Cart billing 
 
 4. On Edit Pop up will show - used overlay with CSS properties.
 
+5. For SELECT drop down arrow used SVG file.
+
 5. Edit overlay with dynamic data is done however UI update post edit is not done.
 
-6. Responsive design is under progress.
+6. Responsive design is implemented
 
 
 

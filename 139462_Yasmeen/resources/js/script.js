@@ -70,8 +70,6 @@ var cartController = (function () {
                 cartDetails.totalCost = temp_sum;
             }
 
-
-
             return cartDetails;
         },
 
@@ -159,6 +157,8 @@ var UIController = (function () {
         totalBill: '#totalBill',
         subTotal: '#subTotal',
         delete_icon: '#delete-icon',
+        cartmessage:".cart-message",
+       
 
         // Promotion code
         promocode: '#promo-code',
@@ -203,7 +203,7 @@ var UIController = (function () {
             html += '<div class="row">';
             html += '<div class="col span-3-of-8">';
 
-            html += '<img src="%imgSource%" alt="%alt%">';
+            html += '<img class="itemImage" src="%imgSource%" alt="%alt%">';
             html += '</div>';
             html += '<div class="col span-5-of-8">';
             html += '<div class="box_item desc">';
@@ -216,13 +216,13 @@ var UIController = (function () {
 
             html += '<div class="action-buttons">';
             html += '<span class="btn" id="edit_btn">Edit</span>';
-            html += '<span>|</span>';
+            html += '<span class="separator">&verbar;</span>';
             html += '<span class="btn" id="delete-btn">';
 
             html += '<i class="ion-close" id="delete-icon"></i>';
             html += 'Remove</span>';
 
-            html += '<span>|</span>';
+            html += '<span class="separator">|</span>';
             html += '<span class="btn">Save for Later</span>';
             html += '</div>';
             html += '</div>';
@@ -277,7 +277,8 @@ var UIController = (function () {
             var el = document.getElementById(selectorID);
 
             el.parentNode.removeChild(el);
-
+            //cart-message
+            
         },
 
         updatecarttotal: function (cart) {
@@ -329,6 +330,11 @@ var UIController = (function () {
 
                 document.querySelector(DOMstrings.shippingCost).innerHTML = '<sup>$</sup>' + cart.shippingCost;
                 document.querySelector(DOMstrings.textshippingcostinfo).innerHTML = '';
+            }
+            if(cart.list.length == 0)
+            {
+                document.querySelector(DOMstrings.cartmessage).style.display='block';
+               
             }
 
         },
@@ -503,6 +509,7 @@ var appController = (function (cartCtrrl, UICtrl) {
                 var promoApplyBtn = document.querySelector(DOM.btn_promo_apply);
                 //if valid update the pricing
                 if (isValid) {
+                     promoCodeValField.classList.remove("red-focus");
                     var cart = cartCtrrl.updateCartdetails();
 
                     UICtrl.updatecarttotal(cart);
@@ -514,7 +521,7 @@ var appController = (function (cartCtrrl, UICtrl) {
 
                     promoCodeSelector.innerHTML = "";
                     //promcode_applied
-                    document.querySelector(DOM.promcode_applied) = codeSelected;
+                    document.querySelector(DOM.promcode_applied).value = codeSelected;
                 } else {
                     document.querySelector(DOM.promocodemessage).classList.add("red");
 

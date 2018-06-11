@@ -1,16 +1,14 @@
 { 
   "shoppingCartItems": [
     {
-      "name": "Striped T-shirt",
+      "name": "Solid Green",
       "size": "S",
       "code": "MS13kt1906",
       "Colour": "blue",
       "price" : 11.25,
-      "discountedprice": 11.25,
-      
-      "imgSource" :"resources/img/Striped-T-shirt.jpg",
+      "discountedprice": 11.25,  
+      "imgSource" :"resources/img/Solid%20green.jpeg",
       "qty":1
-     
     },
     {
       "name": "T shirt Puma",

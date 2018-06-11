@@ -1,0 +1,186 @@
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+    .span-1-of-12,
+    .span-3-of-12,
+    .span-9-of-12 { 
+        width:50%; 
+    }
+    
+    .span-6-of-12,
+    .span-2-of-12,
+    .span-4-of-12,
+    .productCalculation{
+        width: 100%;
+    }
+    
+    .productPromotion {
+        width:60%;
+        margin: 0 auto;
+    }
+    
+    .btnAction{
+        width:100%;
+    }
+    
+    section {
+        padding: 0 15px;
+    }
+    
+    h1 {
+        font-size: 150%;
+        word-spacing: 0px;
+        font-weight: 400;
+        padding: 0 15px;
+    }
+    
+    h1:after{
+        display: none;
+        margin: 0;
+    }
+    
+    .product-header:after  {
+        margin-top: 15px;
+    }
+    
+    .product-size     {
+        text-align: left;       
+    }
+    
+    .quantity{
+        width:30%;
+        margin: 0 20px;
+    }
+    
+    .product-price{
+        text-align: left;       
+        font-size: 150%;
+        font-weight: 700;
+        margin-top: 20px;
+    }
+    
+    .prod-sytle{
+        margin-top: 10px;
+        font-size: 90%;
+    }
+    
+    .qtyBlock .lblMobile{
+        font-size: 120%;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+    
+    
+    .prod-color,
+    .product-size {
+        font-size: 90%;
+    }
+    
+    .lblMobile {
+        display: block; 
+        float: left;
+    }
+    
+    .product-size {
+        line-height: 150%;
+    }
+    
+    .headerDesktop{
+        display: none;
+    }
+    
+    .productPromotion{
+        font-size: 120%;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    
+    .qtyBlock{
+        padding-top: 20px;
+    }
+    
+    .customer-help{
+        display: none;
+    }
+    
+    .productValues{
+        width: 90%;
+        margin: 0 auto;
+       
+    }
+     
+    .productSubtotal, 
+    .productPromotionCode, 
+    .productShipping {
+        line-height: 150%;
+        padding-bottom: 50px;
+    }
+    
+    .btnAction li a, 
+    .btnAction li a:visited, 
+    .btnAction li a:hover, 
+    .btnAction li a:active{
+        font-size: 80%;    
+    }
+    
+    .productTotal{
+        float: left;
+        width: 100%;
+        padding-top: 50px;
+        font-size:100%;
+    }
+    
+    .divShopping {
+        display: flex;
+        flex-direction: column-reverse;
+        width:100%; 
+    }
+    
+    .divCheckOut {
+        width:90%;
+    }
+    
+    .btnCheckOut{
+        width:100%;
+        margin-top: 30px;
+    }
+    
+    .lnkShopping{
+        width:100%;
+        text-align: center;
+        margin: 30px 0;
+    }
+    
+    .promotionInput{
+     width:80%;   
+    }
+    
+    .promotionBtn{
+        width:20%;
+        margin-left: 10px;
+    }
+    
+    #txtPromotion{
+        width: 100%;    
+    }
+    
+    
+    .itemCount{
+        position: absolute;right: 15px;width: auto;top: -35px;
+    }
+    
+    .btnAction{
+        padding-top: 20px;
+    }
+    
+    .imgSecure{
+        margin: 0;
+        float: none;
+    }
+    
+    .divSecurityDisclaimer{
+        text-align: center;
+    }
+   
+}
+

@@ -4,15 +4,13 @@
 }
 
 .main {
-    
     background-color: white;
     margin: auto;
-    padding-top: 10px;
+
 }
 
 body {
     font-family: Arial;
-    background-color: #c7c3c3;
     color: grey;
 }
 
@@ -207,7 +205,7 @@ h1 {
 
 .estimates .promo-code {
     overflow: auto;
-    border-bottom: 5px solid rgb(216, 211, 211);
+    border-bottom: 5px solid #d8d3d3;
     padding: 20px 20px;
 }
 
@@ -223,32 +221,71 @@ h1 {
 
 .order {
     font-weight: bold;
-    padding: 40px 4px;
+
+    padding: 30px 4px;
 }
 
-.order div {
-    width: 50%;
+.order div:first-child {
+    width: 75%;
     display: block;
     float: left;
 
 }
 
+
+.ship {
+    overflow: auto;
+}
+
 .order div:last-child {
-    width: 45%;
+    width: 20%;
     padding-right: 20px;
     float: right;
     text-align: right;
     font-size: 16pt;
+
 }
 
 .total {
     font-size: 20px;
+    display: block;
+    overflow: auto;
+    border-bottom: 5px solid #d8d3d3;
+    margin: 0px 0px 20px 0px;
+}
+
+
+.total:lastchild div:last-child {
+    font-size: 30px;
+
+}
+
+.continue a {
+    #text-decoration: none;
+    font-size: 12px;
+    color: gray;
+
+}
+
+.shop-checkout {
+    text-align: right;
+}
+
+.checkout a {
+    text-decoration: none;
+    border: 1px solid rgb(216, 211, 211);
+    padding: 4px 10px;
+    font-size: 15px;
+    color: white;
+    background-color: #1c7fd6;
 }
 
 .promo-code a {
     text-decoration: none;
     border: 1px solid rgb(216, 211, 211);
     padding: 4px 10px;
+    font-size: 15px;
+    color: gray;
 
 }
 
@@ -266,12 +303,19 @@ h1 {
     color: #d8d3d3;
 }
 
+.secure {
+    text-align: right;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.secure img {
+    width: 20px;
+}
+
 .overlay {
-    visibility: hidden;
     position: fixed;
-    display: block;
-    width: 100%;
-    height: 100%;
+    display: none;
     top: 0;
     left: 0;
     right: 0;
@@ -281,11 +325,24 @@ h1 {
 
 }
 
+.close a {
+    text-decoration: none;
+    font-size: 20px;
+    color: gray;
+
+}
+
 .popup {
     display: none;
-    position: relative;
-    cursor: pointer;
     z-index: 3;
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-40%, -50%);
+    background-color: white;
+
 }
 
 .popup .prod-details {
@@ -293,22 +350,23 @@ h1 {
     width: 90%;
     background-color: #fff;
     text-align: center;
-    position: absolute;
+
     z-index: 2;
     left: 5%;
-   
+
 }
 
 .popup .prod-desc {
-   
+
     display: block;
     float: left;
-    width: 50%;
+    width: 45%;
     text-transform: uppercase;
-   
-    
+
+
 }
-.popup .item-details{
+
+.popup .item-details {
     border-top: 9px solid #d8d3d3;
     width: 80%;
     margin: 30px 20px;
@@ -318,7 +376,7 @@ h1 {
     display: block;
     float: right;
     width: 50%;
-    
+
 }
 
 .popup .prod-image img {
@@ -327,54 +385,62 @@ h1 {
 
 .popup .prod-desc div {
     padding: 10px 0px;
-     overflow: auto;
+    overflow: auto;
 }
-.popup .item-price{
+
+.popup .item-price {
     font-size: 35pt;
-    
+
 }
-.sel-color span{
-    
+
+.sel-color span {
+
     border: 1px solid grey;
     padding: 5px 15px;
 }
-.sel-color span:first-child{
- background-color:yellow;
+
+.sel-color span:first-child {
+    background-color: yellow;
 }
-.sel-color span:last-child{
- background-color:red;
+
+.sel-color span:last-child {
+    background-color: red;
 }
-.sel-size , .sel-qty{
+
+.sel-size,
+.sel-qty {
     border: 1px solid #d8d3d3;
     padding: 2px 2px;
     margin: 4px;
 }
- 
-.sel-size select, .sel-qty select{
+
+.sel-size select,
+.sel-qty select {
     border: none;
 }
-.add-bag{
+
+.add-bag {
     text-decoration: none;
-    color:white;
+    color: white;
     padding: 10px 35px;
     background-color: #6a8ae0;
 }
 
-.see-item{
-  text-transform: none;  
+.see-item {
+    text-transform: none;
     font-size: 14pt;
 }
-/*------------------------------------------*/
 
-/*@media only screen and (max-width: 980px) {
-    .main {
-        width: 100%;
-    }
-}*/
+/*------------------------------------------*/
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
 @media only screen and (max-width: 768px) {
+    h1 {
+
+        font-size: 15pt;
+
+    }
 
 
     .col-left {
@@ -469,6 +535,28 @@ h1 {
 
     }
 
+    .shop-checkout div:first-child {
+        width: 100%;
+        text-align: center;
+        height: 50px;
+    }
+
+    .shop-checkout div:last-child {
+        width: 100%;
+        padding: 0px;
+        display: block;
+        text-align: center;
+    }
+
+    .checkout a {
+        padding: 10px 100px;
+        ;
+    }
+    .popup .prod-desc {
+        width: 100%
+    }
+    .popup .prod-image {
+        width: 100%;
+    }
+
 }
-
-

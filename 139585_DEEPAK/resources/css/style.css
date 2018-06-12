@@ -108,6 +108,7 @@ table-head tr:nth-of-type(1) {}
     border-bottom: 1px solid #dddbdc;
     padding-bottom: 30px;
     margin-bottom: 40px;
+    position: relative;
 }
 
 .cart-placeholder .col:last-of-type {
@@ -164,18 +165,37 @@ table-head tr:nth-of-type(1) {}
     font-weight: 300;
 }
 
+.item-modify {
+    position: absolute;
+    top: 77%;
+    left: 21%;
+    font-size: 80%;
+}
+
 .item-modify ul {
     list-style: none;
 }
 
 .item-modify ul li {
     display: inline;
+    padding: 0 10px;
+    border-right: 1px solid #555;
+    cursor: pointer;
+}
+
+.item-modify ul li span {
+    font-weight: 400;
+    font-size: 120%;
+}
+
+.item-modify ul li:last-child {
+    border-right: 0;
 }
 
 /* ------ The Modal ------ */
 
 .modal {
-/*    display: none;*/
+    display: none;
     position: fixed;
     z-index: 99;
     padding-top: 100px;
@@ -244,10 +264,12 @@ table-head tr:nth-of-type(1) {}
     margin: 15px 0;
     padding-right: 4%;
 }
+
 .promo {
-        border-bottom: 5px solid #dddbdc;
+    border-bottom: 5px solid #dddbdc;
     height: 80px;
 }
+
 .promo p {
     float: left;
     text-transform: uppercase;
@@ -260,32 +282,45 @@ table-head tr:nth-of-type(1) {}
     float: right;
     font-size: 80%;
     padding: 10px 19px;
-        margin-left: 10px;
+    margin-left: 10px;
+        outline: none;
 }
-
+.promo button:active {
+    margin-top: 2px;
+}
 .promo input {
-height: 40px;
+    height: 40px;
     float: right;
+    outline: none;
 }
 
 .calculation table {
-   width: 100%;
+    width: 100%;
     font-size: 80%;
     font-weight: 400;
 }
-.calculation table td{
- margin-bottom: 10px;
-}
-table td{
+
+.calculation table td {
+    margin-bottom: 10px;
     padding: 25px 0px;
 }
-table td:last-child{
+
+table td:first-child {
+        padding: 25px 432px 25px 0px;
+}
+
+table td:last-child {
     text-align: right;
 }
+
 table sub {
     top: -0.4em;
     font-size: 55%;
 }
-.m-value{
+.free-ship {
+    font-weight: 300;
+    color: #dddbdc;
+}
+.m-value {
     font-size: 125%;
 }

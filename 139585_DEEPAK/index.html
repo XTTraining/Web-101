@@ -24,9 +24,9 @@
             <div class="item-price"><span>$</span>{{discountprice}}</div>
             <div class="item-modify">
                 <ul>
-                    <li>Edit</li>
+                    <li class="edit"  data-id="{{id}}">Edit</li>
                     <li class="remove" data-id="{{id}}">Remove</li>
-                    <li>Save for later</li>
+                    <li class="save">Save for later</li>
                 </ul>
             </div>
         </div>
@@ -60,6 +60,8 @@
         <div class="row items cart-placeholder">
         </div>
     </section>
+    <div class="row">
+
     <section class="support">
         <p class="help">Need help or have question?</p>
         <p class="call">Call customer service at 1-800-555-5555</p>
@@ -106,6 +108,8 @@
             <p>continue shopping</p>
         </div>
     </section>
+
+    </div>
     <!-- Modal START -->
     <div id="editModal" class="modal">
         <div class="modal-content">

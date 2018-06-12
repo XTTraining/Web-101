@@ -109,6 +109,7 @@ table-head tr:nth-of-type(1) {}
     padding-bottom: 30px;
     margin-bottom: 40px;
     position: relative;
+    transition: all 1s ease-in-out;
 }
 
 .cart-placeholder .col:last-of-type {
@@ -163,6 +164,7 @@ table-head tr:nth-of-type(1) {}
     resize: none;
     text-align: center;
     font-weight: 300;
+    outline: none;
 }
 
 .item-modify {
@@ -170,6 +172,7 @@ table-head tr:nth-of-type(1) {}
     top: 77%;
     left: 21%;
     font-size: 80%;
+    width: 50%;
 }
 
 .item-modify ul {
@@ -192,6 +195,27 @@ table-head tr:nth-of-type(1) {}
 
 .item-modify ul li:last-child {
     border-right: 0;
+}
+
+.remove, .edit, .save {
+    transition: all 0.1s ease;
+}
+
+.remove:hover {
+    color: #f70000;
+}
+.edit:hover {
+    color: #4b9fec;
+}
+.save:hover {
+    color: #05b736;
+}
+.remove:before {
+    content: 'x';
+    font-weight: 300;
+    font-family: Arial, sans-serif;
+    font-size: 121%;
+    margin-right: 1%;
 }
 
 /* ------ The Modal ------ */
@@ -243,7 +267,7 @@ table-head tr:nth-of-type(1) {}
     width: 35%;
     font-size: 80%;
     float: left;
-    padding: 0 0 0 4%;
+/*    padding: 0 0 0 4%;*/
 }
 
 .support p {
@@ -264,7 +288,7 @@ table-head tr:nth-of-type(1) {}
     width: 65%;
     float: right;
     margin: 15px 0;
-    padding-right: 4%;
+/*    padding-right: 4%;*/
 }
 
 .promo {
@@ -349,9 +373,11 @@ table sub {
     border-bottom: 5px solid #dddbdc;
     height: 100px;
 }
-.submit{
+
+.submit {
     margin-top: 25px;
 }
+
 .submit * {
     text-transform: uppercase;
 }
@@ -360,6 +386,7 @@ table sub {
     background-color: #066ab7;
     color: #fefefe;
 }
+
 .submit p {
     float: right;
     border-bottom: 1px solid #555;
@@ -368,6 +395,7 @@ table sub {
     margin-right: 4%;
     letter-spacing: 2px;
 }
+
 .submit button,
 .submit p {
     float: right;

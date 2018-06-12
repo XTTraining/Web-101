@@ -1,30 +1,3 @@
-//
-//$(function () {
-//    /* Handle Bar section */
-//    var theTemplateScript = $("#address-template").html();
-//    var theTemplate = Handlebars.compile(theTemplateScript);
-//    var data = httpGet('https://www.mocky.io/v2/5b0cbbd6330000d529b40099');
-//    var context = JSON.parse(data);
-//    if (context.cartitems.length) {
-//        $('.table-head tr th:eq(0) span').text(context.cartitems.length);
-//    }
-//    var theCompiledHtml = theTemplate(context);
-//    $('.cart-placeholder').html(theCompiledHtml);
-//
-//
-//    /* Modal section */
-//    document.getElementsByClassName("close")[0].onclick = function () {
-//        document.getElementById('myModal').style.display = "none";
-//        document.getElementById('myModal').style.display = "0";
-//    }
-//});
-
-
-
-
-
-
-
 /*  ----- CART CONTROLLER -----  */
 var cartController = (function () {
     var data = {
@@ -39,7 +12,7 @@ var cartController = (function () {
         data.allItems.forEach(function (cur) {
             data.subtotal += (cur.discountprice * cur.quantity);
         });
-        if (data.subtotal - data.promotion >= 50) {
+        if (data.subtotal - data.promotion >= 50 || data.subtotal === 0) {
             data.shipping = 0;
         } else {
             data.shipping = 3; // Fee for shipping
@@ -80,23 +53,32 @@ var UIController = (function () {
             var theTemplateScript = $("#address-template").html();
             var theTemplate = Handlebars.compile(theTemplateScript);
             if (data.cartitems.length) {
-                $('.table-head tr th:eq(0) span').text(data.cartitems.length);
+                document.querySelector('.table-head tr th:first-child span').textContent = data.cartitems.length;
             }
             var theCompiledHtml = theTemplate(data);
-            $('.cart-placeholder').html('');
-            $('.cart-placeholder').html(theCompiledHtml);
+            document.querySelector('.cart-placeholder').innerHTML = '';
+            document.querySelector('.cart-placeholder').innerHTML = theCompiledHtml;
+//            $('.cart-placeholder').html('');
+//            $('.cart-placeholder').html(theCompiledHtml);
         },
         updateCheckout: function (cal) {
             document.querySelector('.subtotal span').textContent = cal.subtotal;
             document.querySelector('.pcode span').textContent = cal.promotion;
             if (cal.shipping > 0) {
                 document.querySelector('.shipcost span').textContent = cal.shipping;
+            }else{
+                document.querySelector('.shipcost span').textContent = "FREE";
             }
             document.querySelector('.finalTotal span').textContent = cal.finalTotal;
+            document.querySelector('.table-head tr th:first-child span').textContent = cal.allItems.length;
         },
         removeFromCart: function (id) {
             var el = document.querySelector('.itemid-' + id);
+            if(el) el.style.border = "0 0 0 80%";
             if (el) el.parentNode.removeChild(el);
+        },
+        editPopup: function(id){
+            document.getElementById('editModal').style.display = "block";
         }
     }
 
@@ -107,6 +89,7 @@ var controller = (function (cartCtrl, UICtrl) {
     var datajson;
     var setupEventListners = function () {
         var calculation;
+        //For Remove button
         document.querySelector('.cart-placeholder').addEventListener('click', function (event) {
             if (event.target.classList.contains('remove') && event.target.dataset.id) {
                 UICtrl.removeFromCart(event.target.dataset.id);
@@ -114,6 +97,16 @@ var controller = (function (cartCtrl, UICtrl) {
                 calculation = cartCtrl.updateData(event.target.dataset.id);
                 UICtrl.updateCheckout(calculation);
             }
+        });
+        //For Edit button
+        document.querySelector('.cart-placeholder').addEventListener('click', function (event) {
+            if (event.target.classList.contains('edit') && event.target.dataset.id) {
+                UICtrl.editPopup(event.target.dataset.id);
+            }
+        });
+        //for close button
+        document.querySelector('.modal .close').addEventListener('click', function (event) {
+            document.getElementById('editModal').style.display = "none";
         });
     }
     return {
@@ -145,3 +138,25 @@ function httpGet(theUrl) {
     xmlHttp.send();
     return xmlHttp.responseText;
 }
+
+
+//
+//$(function () {
+//    /* Handle Bar section */
+//    var theTemplateScript = $("#address-template").html();
+//    var theTemplate = Handlebars.compile(theTemplateScript);
+//    var data = httpGet('https://www.mocky.io/v2/5b0cbbd6330000d529b40099');
+//    var context = JSON.parse(data);
+//    if (context.cartitems.length) {
+//        $('.table-head tr th:eq(0) span').text(context.cartitems.length);
+//    }
+//    var theCompiledHtml = theTemplate(context);
+//    $('.cart-placeholder').html(theCompiledHtml);
+//
+//
+//    /* Modal section */
+//    document.getElementsByClassName("close")[0].onclick = function () {
+//        document.getElementById('myModal').style.display = "none";
+//        document.getElementById('myModal').style.display = "0";
+//    }
+//});

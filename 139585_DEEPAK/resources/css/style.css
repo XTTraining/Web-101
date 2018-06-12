@@ -183,10 +183,12 @@ table-head tr:nth-of-type(1) {}
     cursor: pointer;
 }
 
+/*
 .item-modify ul li span {
     font-weight: 400;
     font-size: 120%;
 }
+*/
 
 .item-modify ul li:last-child {
     border-right: 0;

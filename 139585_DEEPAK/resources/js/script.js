@@ -34,14 +34,15 @@ var cartController = (function () {
         shipping: 0,
         finalTotal: 0
     }
-    var calculateCart = function(){
-        data.allItems.forEach(function(cur) {
+    var calculateCart = function () {
+        data.subtotal = 0;
+        data.allItems.forEach(function (cur) {
             data.subtotal += (cur.discountprice * cur.quantity);
         });
-        if(data.subtotal - data.promotion >= 50){
+        if (data.subtotal - data.promotion >= 50) {
             data.shipping = 0;
-        }else{
-            data.shipping = 3;// Fee for shipping
+        } else {
+            data.shipping = 3; // Fee for shipping
         }
         data.finalTotal = (data.subtotal - data.promotion) + data.shipping;
         console.log(data);
@@ -52,6 +53,20 @@ var cartController = (function () {
             data.allItems = datajson.cartitems;
             calculateCart();
             return data;
+        },
+        updateData: function (id) {
+            var removeIndex = data.allItems.map(function (cur) {
+                return cur.id;
+            }).indexOf(parseInt(id));
+            if (removeIndex > -1) data.allItems.splice(removeIndex, 1);
+            console.log(data);
+            calculateCart();
+            return data;
+            //            data.allItems.forEach(function (cur) {
+            //                if(cur.id == id){
+            //
+            //                }
+            //            });
         }
     }
 })();
@@ -71,13 +86,18 @@ var UIController = (function () {
             $('.cart-placeholder').html('');
             $('.cart-placeholder').html(theCompiledHtml);
         },
-        updateCheckout: function(cal) {
-        document.querySelector('.subtotal span:nth-of-type(1)').textContent = cal.subtotal;
-        document.querySelector('.pcode span:nth-of-type(1)').textContent = cal.promotion;
-            if(cal.shipping > 0){
-                document.querySelector('.shipcost span:nth-of-type(1)').textContent = cal.shipping;
+        updateCheckout: function (cal) {
+            document.querySelector('.subtotal span').textContent = cal.subtotal;
+            document.querySelector('.pcode span').textContent = cal.promotion;
+            if (cal.shipping > 0) {
+                document.querySelector('.shipcost span').textContent = cal.shipping;
             }
-    }
+            document.querySelector('.finalTotal span').textContent = cal.finalTotal;
+        },
+        removeFromCart: function (id) {
+            var el = document.querySelector('.itemid-' + id);
+            if (el) el.parentNode.removeChild(el);
+        }
     }
 
 })();
@@ -86,7 +106,15 @@ var UIController = (function () {
 var controller = (function (cartCtrl, UICtrl) {
     var datajson;
     var setupEventListners = function () {
-
+        var calculation;
+        document.querySelector('.cart-placeholder').addEventListener('click', function (event) {
+            if (event.target.classList.contains('remove') && event.target.dataset.id) {
+                UICtrl.removeFromCart(event.target.dataset.id);
+                //update data
+                calculation = cartCtrl.updateData(event.target.dataset.id);
+                UICtrl.updateCheckout(calculation);
+            }
+        });
     }
     return {
         init: function () {
@@ -112,8 +140,8 @@ controller.init();
 function httpGet(theUrl) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", theUrl, false); // false for synchronous request
-//        xmlHttp.setRequestHeader("Access-Control-Allow-Origin", "*");
-//    xmlHttp.setRequestHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    //        xmlHttp.setRequestHeader("Access-Control-Allow-Origin", "*");
+    //    xmlHttp.setRequestHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     xmlHttp.send();
     return xmlHttp.responseText;
 }

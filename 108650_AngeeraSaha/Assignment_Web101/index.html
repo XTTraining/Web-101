@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+        <title>Assignment_Web101</title>
+        
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1>Your shopping bag</h1>
+            </div>
+        </header>
+        
+        <section class="product-details" id="items">
+            <div class="row orders">
+                <div class="col span-5-of-8 order-items-count">
+                    <div><strong>3 </strong>items</div>
+                </div>
+                <div class="col span-1-of-8 order-details">
+                    <div>Size</div>
+                </div>
+                <div class="col span-1-of-8 order-details">
+                    <div>Qty</div>
+                </div>
+                <div class="col span-1-of-8 order-details">
+                    <div>Price</div>
+                </div>
+            </div>
+            <div class="products">
+                <hr>
+                <ul class="item-selected">
+                    <!--<li id="product-0">
+                        <div>
+                            <div class="col span-5-of-8 item-material-details">
+                                <div class="col span-2-of-5 item-photo">
+                                    <img src="resources/img/capture1.png" alt="black tee">
+                                </div>
+                                <div class="col span-3-of-5 item-context">
+                                    <div class="item-details">
+                                        <p class="item-full-name">Solid Green Cotton Tshirt</p>
+                                        <p>Style #: MS|3KT1906</p> 
+                                        <p> Colour:Blue</p>
+                                    </div>  
+                                    <div class="item-order-edit">
+                                        <a class="edit-link item-edit" href="#popup1">Edit</a>
+                                        <div>
+                                            <a class="edit-link item-delete" href="#">X Remove</a>
+                                        </div>
+                                        <a class="edit-link last" href="#">Save for later</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="col span-1-of-8 item-order-details">
+                                    <div id="size-0">S</div>
+                                </div>
+                                <div class="col span-1-of-8 item-order-details">
+                                    <div class="box" id="qty-0">1</div>
+                                </div>
+                                <div class="col span-1-of-8 item-order-details">
+                                    <div class="price" id="price-0"><span><sup>$</sup></span>11.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border"></div>
+                    </li>
+                    <li id="product-1">
+                        <div>
+                            <div class="col span-5-of-8 item-material-details">
+                                <div class="col span-2-of-5 item-photo">
+                                    <img src="resources/img/capture2.png" alt="pink top">
+                                </div>
+                                <div class="col span-3-of-5 item-context">
+                                    <div class="item-details">
+                                        <p class="item-full-name">Pink rainbow print girls tee</p>
+                                        <p>Style #: MS|3KT1906</p> 
+                                        <p> Colour:Gray</p>
+                                    </div>  
+                                    <div class="item-order-edit">
+                                        <a class="edit-link item-edit" href="#popup1">Edit</a>
+                                        <div>
+                                            <a class="edit-link item-delete" href="#">X Remove</a>
+                                        </div>
+                                        <a class="edit-link last" href="#">Save for later</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="col span-1-of-8 item-order-details">
+                                    <div class="itemsize">S</div>
+                                </div>
+                                <div class="col span-1-of-8 item-order-details">
+                                    <div class="box">1</div>
+                                </div>
+                                <div class="col span-1-of-8 item-order-details">
+                                    <div class="price"><span><sup>$</sup></span>17.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border"></div>
+                    </li>
+                    <li id="product-2">
+                        <div>
+                            <div class="col span-5-of-8 item-material-details">
+                                <div class="col span-2-of-5 item-photo">
+                                    <img src="resources/img/capture4.png" alt="white shirt">
+                                </div>
+                                <div class="col span-3-of-5 item-context">
+                                    <div class="item-details">
+                                        <p class="item-full-name">Blue flower pattern shirt</p>
+                                        <p>Style #: MS|3KT1906</p> 
+                                        <p> Colour:Blue</p>
+                                    </div>  
+                                    <div class="item-order-edit">
+                                        <a class="edit-link item-edit" href="#popup1">Edit</a>
+                                        <div>
+                                            <a class="edit-link item-delete" href="#">X Remove</a>
+                                        </div>
+                                        <a class="edit-link last" href="#">Save for later</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="col span-1-of-8 item-order-details">
+                                <div class="size">S</div>
+                                </div>
+                                <div class="col span-1-of-8 item-order-details">
+                                    <div class="box">1</div>
+                                </div>
+                                <div class="col span-1-of-8 item-order-details">
+                                    <div class="price">
+                                        <span><sup>$</sup></span><strike>21.00</strike>
+                                        <br>
+                                        <span><sup>$</sup></span>9.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-solid"></div>
+                    </li>-->
+                </ul>
+            </div>    
+        </section>
+        <section class="purchase-details">
+            <div class="promotion">
+                <div class="col span-2-of-5 promotion-code">
+                    <p>Enter promotion code or gift card</p>
+                </div>
+                <div class="col span-2-of-5 promotion-code">
+                    <input type="text" class="add_promocode" name="pcode" id="promocode" placeholder="enter jf 10">
+                </div>
+                <div class="col span-1-of-5 apply">
+                    <a class="btn-ghost" href="#">Apply</a>
+                </div>
+                <div class="border-solid"></div>
+            </div>
+            <div class="total-payment">
+                <div>
+                    <div class="col span-4-of-5 payment-detail">
+                        <p class="solid">Subtotal</p>
+                    </div>
+                    <div class="col span-1-of-5 amount">
+                        <div class="price" id="subtotal"><span><sup>$</sup></span>37.00</div>
+                    </div>
+                    <div class="col span-4-of-5 payment-detail">
+                        <p class="solid" id="promcode"></p>
+                    </div>
+                    <div class="col span-1-of-5 amount">
+                        <div class="price" id="promoamt"><span>- <sup>$</sup></span>7.00</div>
+                    </div>
+                    <div class="col span-4-of-5 payment-detail">
+                        <p class="solid">estimated shipping<sup>*</sup></p>
+                        <p class="text-normal">You qualify for free shipping because your order is over $50<sup>*</sup></p>
+                    </div>
+                    <div class="col span-1-of-5 estimate-shipping">
+                        <p>free</p>
+                    </div>
+                </div>
+                <div class="border"></div>
+            </div>
+            <div class="estimated-total">
+                <div>
+                    <div class="col span-4-of-5 estimation">
+                        <p class="solid">Estimated total</p>
+                        <p>Tax will be applied during checkout</p>
+                    </div>
+                    <div class="col span-1-of-5 estimated-price">
+                        <div class="price" id="estimate-total"><strong><span><sup>$</sup></span>30.00</strong></div>
+                    </div>
+                </div>
+                <div class="border-solid"></div>
+            </div>
+            <div class="secure-checkout">
+                <div class="col span-4-of-5">
+                    <p class="text-underline shopping">Continue shopping</p>
+                </div>
+                <div class="col span-1-of-5">
+                    <a class="btn-solid" href="#">Checkout</a>
+                </div>
+            </div>
+            <div class="safe-shopping">
+                
+                <p>Secure checkout. Shopping is always safe &amp; secure</p>
+                <img src="resources/img/secure.jpg" alt="secure">
+            </div>
+        </section>
+        
+        <section class="support">
+            <div class="support-details">
+                <p class="solid">Need help<br> or have questions?</p>
+                <p>Call Customer Service at 1-800-555-5555</p>
+                <p class="text-underline">Chat with one of <br>our stylist</p>
+                <p class="text-underline">See return <br>and exchange policy</p>
+            </div>
+            
+        </section>    
+        
+            <div id="popup1" class="overlay">
+                <!--<div class="popup" id="popup-item">
+                    <div class="col span-4-of-8 overlay-content">
+                       <div class="left-content">
+                           <div class="border"></div>
+                            <div>
+                                <p class="item-heading">Solid Green Cotton Tshirt</p>
+                            </div>
+                            <div class="item-price"><span><sup>$</sup></span>11.00</div>
+                            <div class="color-options"></div>
+                            <div class="edit-item">
+                                <select class="button-ghost size" id="size-select">
+                                  <option value="sizes">Size</option>
+                                  <option value="small">S</option>
+                                  <option value="medium">M</option>
+                                  <option value="large">L</option>
+                                </select>
+                                <select class="button-ghost quantity" id="qty-select">
+                                  <option value="qty:">Qty:</option>
+                                  <option value="one">1</option>
+                                  <option value="two">2</option>
+                                  <option value="three">3</option>
+                                </select>
+                            </div>
+                           <div class="overlay-solid">
+                                <a class="button-solid" href="#">Edit</a>
+                           </div>
+                           <div class="see-prod-details">
+                                <a class="see" href="#">See product details</a>
+                           </div>
+                           
+                        </div>
+                    </div>
+                    <div class="col span-4-of-8 overlay-img">
+                        <div class="right-content">
+                            <img src="resources/img/capture1.png" alt="black tee">
+                        </div>
+                    </div>
+                    <a class="close" href="#">
+                           <img src="resources/img/close.png" alt="close">
+                    </a>
+                    <input type="hidden" id="unitprice" name="unitPrice" value="jhhk">
+                    <input type="hidden" id="id" name="itemId" value="0">
+                </div>-->
+            </div>
+        
+            <footer>
+            </footer>
+        
+        <script src="resources/js/script.js"></script>
+    </body>  
+    
+</html>

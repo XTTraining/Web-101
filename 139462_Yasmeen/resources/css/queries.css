@@ -1,0 +1,183 @@
+/* Big tablet to 1200px (widths smaller taht the 1140px row) */
+
+@media only screen and (max-width: 1200px) {
+
+    .row {
+        /* padding: 0 2%;*/
+    }
+}
+
+
+/* Small tablet to big tablet: from 768px to 1023px */
+
+@media only screen and (max-width: 1023px) {
+    body {
+        font-size: 18px;
+    }
+    section {
+        padding: 5px 0;
+    }
+
+}
+
+/* Small phones to small tablets: from 481px to 767px */
+
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+    section {
+        padding: 5px 0;
+    }
+
+    h1 {
+        font-size: 180%;
+    }
+    h2 {
+        font-size: 150%;
+    }
+
+    .hide_n_tab {
+        display: none;
+    }
+    .cart_count {
+        padding: 15px;
+    }
+
+    .item_image {
+        width: 70%;
+    }
+
+    .box_item {
+        margin-top: 5px;
+        text-align: center;
+
+    }
+    .promo-code {
+        width: 100px;
+    }
+    .shopping-bill {
+        margin-top: 20px;
+    }
+    #edit_name {
+
+        margin-top: 10px;
+    }
+    #edit_price {
+        font-size: 200%;
+    }
+    #edit_color_heading {
+        margin-top: 10px;
+    }
+    #editSubmit {
+        width: 100px;
+    }
+    #editpopup {
+
+        position: fixed;
+        top: 2%;
+        left: 5%;
+        background: #eee;
+        width: 70%;
+        /*height: 80%;*/
+        height: auto;
+        z-index: 200;
+        overflow-y: scroll;
+    }
+    .btn-blue {
+        width: 300px;
+        margin: 15px;
+        float: left;
+    }
+    #btn-continue {
+        position: absolute;
+        margin: 60px;
+        left: 55px;
+    }
+    .action-buttons {
+        margin-left: 40px;
+        margin-top: 12px;
+    }
+    /* Small phones: from 0 to 480px */
+    @media only screen and (max-width: 480px) {
+
+        .hide_tab {
+            display: none;
+        }
+        .shopping-bill {
+            width: 100%;
+        }
+        .item_image {
+            width: 60%;
+        }
+        .box_item {
+            margin-top: 5px;
+
+        }
+        .promo_text {
+            text-align: center;
+        }
+        .promo-code {
+            width: 100px;
+        }
+        .shopping-bill {
+            margin-top: 20px;
+        }
+        .span-4-of-8 {
+            width: 40%;
+
+        }
+        .span-1-of-2 {
+            width: 40%;
+        }
+        #edit_name {
+            padding-top: 5px;
+            margin-top: 10px;
+        }
+        #edit_price {
+            font-size: 200%;
+        }
+        #edit_color_heading {
+            margin-top: 10px;
+        }
+        #editSubmit {
+            width: 100px;
+        }
+        .close {
+            font-size: 30px;
+        }
+
+        #editpopup {
+
+            position: fixed;
+            top: 2%;
+            left: 5%;
+            background: #eee;
+            width: 70%;
+            /*height: 80%;*/
+            height: auto;
+            z-index: 200;
+            overflow-y: scroll;
+        }
+        #btn-continue {
+            position: absolute;
+            margin: 60px;
+            left: 55px;
+        }
+
+        .itemImage {
+            width: 80%;
+        }
+        .action-buttons {
+            margin-left: 40px;
+            margin-top: 12px;
+        }
+
+        /* }
+       .desc{
+            position: absolute;
+            left: 250px;
+            top:15%;
+           
+        }*/
+    }

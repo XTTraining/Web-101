@@ -1,0 +1,34 @@
+{ 
+  "shoppingCartItems": [
+    {
+      "name": "Solid Green",
+      "size": "S",
+      "code": "MS13kt1906",
+      "Colour": "blue",
+      "price" : 11.25,
+      "discountedprice": 11.25,  
+      "imgSource" :"resources/img/Solid%20green.jpeg",
+      "qty":1
+    },
+    {
+      "name": "T shirt Puma",
+      "size": "M",
+      "code": "MS13kt1907",
+      "Colour": "green",
+      "price" : 17.50,
+      "discountedprice": 10.25,
+      "imgSource" :"resources/img/t-shirt-puma.jpg",
+      "qty":2
+    },
+    {
+      "name": "Blue T-Shirt",
+      "size": "M",
+      "code": "MS13kt1908",
+      "Colour": "yellow",
+      "price" : 41.50,
+      "discountedprice": 41.50,
+      "imgSource" :"resources/img/blue-shirt.jpg",
+       "qty":1
+    }
+  ]
+}

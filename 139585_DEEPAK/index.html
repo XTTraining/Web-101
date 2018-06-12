@@ -12,7 +12,7 @@
     <!--Handlebar templates start-->
     <script id="address-template" type="text/x-handlebars-template">
         {{#each cartitems}}
-        <div class="col clearfix">
+        <div class="col itemid-{{id}} clearfix">
             <div class="item-pic"><img src="{{photo}}" alt=""></div>
             <div class="item-desc">
                 <p>{{name}}</p>
@@ -76,22 +76,35 @@
             <table>
                 <tr>
                     <td>SUBTOTAL</td>
-                    <td class="m-value"><sub>$</sub><span></span></td>
+                    <td class="m-value subtotal"><sub>$</sub><span></span></td>
                 </tr>
                 <tr>
                     <td>PROMOTION CODE <span></span> APPLIED</td>
-                    <td class="m-value"><sub>$</sub><span>24</span></td>
+                    <td class="m-value pcode"><sub>$</sub><span>24</span></td>
                 </tr>
                 <tr>
                     <td>ESTIMATED SHIPPING
                         <p class="free-ship">You qualified for free shipping because your order is over <span></span></p>
                     </td>
-                    <td class="m-value"><sub>$</sub><span>FREE</span></td>
+                    <td class="m-value shipcost"><sub>$</sub><span>FREE</span></td>
                 </tr>
             </table>
         </div>
-        <div class="estimate"></div>
-        <div class="submit"></div>
+        <div class="estimate">
+            <table>
+                <tr>
+                    <td>ESTIMATED TOTAL
+                        <p class="tax">Tax will be applied during checkout</p>
+                    </td>
+                    <td class="m-value"><sub>$</sub><span>30.00</span></td>
+                </tr>
+            </table>
+        </div>
+        <div class="submit">
+
+            <button type="button">checkout</button>
+            <p>continue shopping</p>
+        </div>
     </section>
     <!-- Modal START -->
     <div id="editModal" class="modal">

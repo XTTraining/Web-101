@@ -36,14 +36,22 @@ var cartController = (function () {
     }
     var calculateCart = function(){
         data.allItems.forEach(function(cur) {
-            data.subtotal += cur.discountprice + cur.quantity;
+            data.subtotal += (cur.discountprice * cur.quantity);
         });
+        if(data.subtotal - data.promotion >= 50){
+            data.shipping = 0;
+        }else{
+            data.shipping = 3;// Fee for shipping
+        }
+        data.finalTotal = (data.subtotal - data.promotion) + data.shipping;
+        console.log(data);
     }
 
     return {
-        passData: function (datajson) {
+        passJson: function (datajson) {
             data.allItems = datajson.cartitems;
             calculateCart();
+            return data;
         }
     }
 })();
@@ -62,7 +70,14 @@ var UIController = (function () {
             var theCompiledHtml = theTemplate(data);
             $('.cart-placeholder').html('');
             $('.cart-placeholder').html(theCompiledHtml);
-        }
+        },
+        updateCheckout: function(cal) {
+        document.querySelector('.subtotal span:nth-of-type(1)').textContent = cal.subtotal;
+        document.querySelector('.pcode span:nth-of-type(1)').textContent = cal.promotion;
+            if(cal.shipping > 0){
+                document.querySelector('.shipcost span:nth-of-type(1)').textContent = cal.shipping;
+            }
+    }
     }
 
 })();
@@ -75,13 +90,15 @@ var controller = (function (cartCtrl, UICtrl) {
     }
     return {
         init: function () {
+            var calculation;
             console.log('Application has Started.');
             //get Shopping cart details from server
             var data = httpGet('http://www.mocky.io/v2/5b1ed4a03100008a233ff9f6');
             datajson = JSON.parse(data);
             //Update Handlebar data
             UICtrl.renderHandlebar(datajson);
-            cartCtrl.passData(datajson);
+            calculation = cartCtrl.passJson(datajson);
+            UICtrl.updateCheckout(calculation);
             //setup events
             setupEventListners();
         }

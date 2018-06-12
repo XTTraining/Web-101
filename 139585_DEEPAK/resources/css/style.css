@@ -277,17 +277,19 @@ table-head tr:nth-of-type(1) {}
     font-size: 80%;
 }
 
-.promo button {
+button {
     background-color: #fefefe;
     float: right;
     font-size: 80%;
     padding: 10px 19px;
     margin-left: 10px;
-        outline: none;
+    outline: none;
 }
-.promo button:active {
+
+button:active {
     margin-top: 2px;
 }
+
 .promo input {
     height: 40px;
     float: right;
@@ -306,7 +308,7 @@ table-head tr:nth-of-type(1) {}
 }
 
 table td:first-child {
-        padding: 25px 432px 25px 0px;
+    padding: 25px 432px 25px 0px;
 }
 
 table td:last-child {
@@ -317,10 +319,54 @@ table sub {
     top: -0.4em;
     font-size: 55%;
 }
-.free-ship {
+
+.free-ship,
+.tax {
     font-weight: 300;
     color: #dddbdc;
 }
+
 .m-value {
     font-size: 125%;
+}
+
+.estimate table {
+    width: 100%;
+    font-weight: 400;
+}
+
+.estimate .tax {
+    font-size: 80%;
+}
+
+.calculation {
+    border-bottom: 1px solid #dddbdc;
+}
+
+.estimate {
+    border-bottom: 5px solid #dddbdc;
+    height: 100px;
+}
+.submit{
+    margin-top: 25px;
+}
+.submit * {
+    text-transform: uppercase;
+}
+
+.submit button {
+    background-color: #066ab7;
+    color: #fefefe;
+}
+.submit p {
+    float: right;
+    border-bottom: 1px solid #555;
+    font-size: 70%;
+    padding-top: 10px;
+    margin-right: 4%;
+    letter-spacing: 2px;
+}
+.submit button,
+.submit p {
+    float: right;
 }

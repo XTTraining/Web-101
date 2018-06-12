@@ -35,7 +35,7 @@ body {
   
 }
 
-.item-count,.mobile-msg{
+.item-count,.mobile-msg,.checkout-sign-on{
     display: none;
 }
 section {
@@ -299,9 +299,9 @@ h4 {
     margin-bottom: 5px;
     font-weight: 400;
     color: inherit;
+    padding-top: 13px;
     word-spacing: 4px;
-    padding-top: 5px;
-    word-spacing: 4px;
+    float: left;
 }
 
 .checkout-info{
@@ -309,7 +309,18 @@ h4 {
     margin-top:30px;
 }
 
+.checkout-info i{
+    
+}
+
 .checkout-lock{    
     color:#f4e542; 
     padding-right: 10px;
+    font-size: 30px !important;
+    float:left;
+    vertical-align: bottom;
+}
+
+.checkout-info:after {
+    display: none;    
 }

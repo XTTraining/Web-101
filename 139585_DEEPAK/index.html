@@ -21,7 +21,7 @@
             </div>
             <div class="item-size">{{size}}</div>
             <div class="item-qty"><textarea readonly>{{quantity}}</textarea></div>
-            <div class="item-price"><span>$</span>{{discountprice}}</div>
+            <div class="item-price"><sub>$</sub><span>{{mul discountprice quantity}}</span></div>
             <div class="item-modify">
                 <ul>
                     <li class="edit"  data-id="{{id}}">Edit</li>
@@ -115,17 +115,17 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <div class="editit">
-                <p class="name"></p>
-                <p class="price"><sub>$</sub><span></span></p>
+                <p class="name" data-id="0">Deepak kumar</p>
+                <p class="price"><sub>$</sub><span>25</span></p>
                 <div class="changeit">
-                    <select name="size">
+                    <select class="editsize" name="size">
                       <option selected="selected">SIZE</option>
                         <option value="S">S</option>
                         <option value="M">M</option>
                         <option value="L">L</option>
                       </select>
 
-                    <select name="size">
+                    <select class="editqty" name="size">
                       <option selected="selected">QTY</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -134,8 +134,12 @@
                         <option value="5">5</option>
                       </select>
                 </div>
+                <div class="editdone">
+                <button type="button">EDIT</button>
+                <p>See product details</p>
+                </div>
             </div>
-            <div class="viewit"><img src="" alt=""></div>
+            <div class="viewit"><img src="resources/img/pink-ts.jpg" alt=""></div>
         </div>
     </div>
     <!-- Modal END -->

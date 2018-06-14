@@ -28,10 +28,12 @@ var cartController = (function () {
             return data;
         },
         updateData: function (id) {
-            var removeIndex = data.allItems.map(function (cur) {
-                return cur.id;
-            }).indexOf(parseInt(id));
-            if (removeIndex > -1) data.allItems.splice(removeIndex, 1);
+            if (id) { //remove item logic
+                var removeIndex = data.allItems.map(function (cur) {
+                    return cur.id;
+                }).indexOf(parseInt(id));
+                if (removeIndex > -1) data.allItems.splice(removeIndex, 1);
+            }
             console.log(data);
             calculateCart();
             return data;
@@ -40,6 +42,17 @@ var cartController = (function () {
             //
             //                }
             //            });
+        },
+        savePopupData: function (id) {
+            var index = data.allItems.map(function (cur) {
+                return cur.id;
+            }).indexOf(parseInt(id));
+            data.allItems[index].size = document.querySelector('.editsize').value;
+            data.allItems[index].quantity = parseInt(document.querySelector('.editqty').value);
+            calculateCart();
+        },
+        getData: function () {
+            return data;
         }
     }
 })();
@@ -50,6 +63,7 @@ var UIController = (function () {
 
     return {
         renderHandlebar: function (data) {
+            reisterHelpers();
             var theTemplateScript = $("#address-template").html();
             var theTemplate = Handlebars.compile(theTemplateScript);
             if (data.cartitems.length) {
@@ -58,27 +72,47 @@ var UIController = (function () {
             var theCompiledHtml = theTemplate(data);
             document.querySelector('.cart-placeholder').innerHTML = '';
             document.querySelector('.cart-placeholder').innerHTML = theCompiledHtml;
-//            $('.cart-placeholder').html('');
-//            $('.cart-placeholder').html(theCompiledHtml);
+            //            $('.cart-placeholder').html('');
+            //            $('.cart-placeholder').html(theCompiledHtml);
         },
         updateCheckout: function (cal) {
             document.querySelector('.subtotal span').textContent = cal.subtotal;
             document.querySelector('.pcode span').textContent = cal.promotion;
             if (cal.shipping > 0) {
                 document.querySelector('.shipcost span').textContent = cal.shipping;
-            }else{
+            } else {
                 document.querySelector('.shipcost span').textContent = "FREE";
             }
             document.querySelector('.finalTotal span').textContent = cal.finalTotal;
             document.querySelector('.table-head tr th:first-child span').textContent = cal.allItems.length;
         },
+        updateItems: function (data, id) {
+            var index = data.allItems.map(function (cur) {
+                return cur.id;
+            }).indexOf(parseInt(id));
+            var product = data.allItems[index];
+            document.querySelector('.itemid-' + id + ' .item-size').textContent = product.size;
+            document.querySelector('.itemid-' + id + ' .item-qty textarea').value = product.quantity;
+            document.querySelector('.itemid-' + id + ' .item-price span').textContent = (product.discountprice * product.quantity);
+        },
         removeFromCart: function (id) {
             var el = document.querySelector('.itemid-' + id);
-            if(el) el.style.border = "0 0 0 80%";
             if (el) el.parentNode.removeChild(el);
         },
-        editPopup: function(id){
-            document.getElementById('editModal').style.display = "block";
+        editPopup: function (data, id) {
+            var index = data.allItems.map(function (cur) {
+                return cur.id;
+            }).indexOf(parseInt(id));
+            //update popup
+            document.querySelector('.name').textContent = data.allItems[index].name;
+            document.querySelector('.name').dataset.id = data.allItems[index].id;
+            document.querySelector('.price span').textContent = data.allItems[index].discountprice;
+            document.querySelector('.editsize').value = data.allItems[index].size;
+            document.querySelector('.editqty').value = data.allItems[index].quantity;
+            document.querySelector('.viewit img').src = data.allItems[index].photo;
+            //show popup
+            document.getElementById('editModal').style.visibility = "visible";
+            document.getElementById('editModal').style.opacity = "100";
         }
     }
 
@@ -101,12 +135,28 @@ var controller = (function (cartCtrl, UICtrl) {
         //For Edit button
         document.querySelector('.cart-placeholder').addEventListener('click', function (event) {
             if (event.target.classList.contains('edit') && event.target.dataset.id) {
-                UICtrl.editPopup(event.target.dataset.id);
+                UICtrl.editPopup(cartCtrl.getData(), event.target.dataset.id);
             }
         });
         //for close button
-        document.querySelector('.modal .close').addEventListener('click', function (event) {
-            document.getElementById('editModal').style.display = "none";
+        document.querySelector('.modal .close').addEventListener('click', function () {
+            //document.getElementById('editModal').style.display = "none";
+            document.getElementById('editModal').style.visibility = "hidden";
+            document.getElementById('editModal').style.opacity = "0";
+        });
+        //for Edit and Save from popup
+        document.querySelector('.editdone button').addEventListener('click', function () {
+            var target, calculation, data;
+            target = document.querySelector('.name').dataset.id;
+            if (target) {
+                target = parseInt(target);
+                cartController.savePopupData(target);
+                data = cartCtrl.getData();
+                UICtrl.updateItems(data, target);
+                UICtrl.updateCheckout(data);
+            }
+            document.getElementById('editModal').style.visibility = "hidden";
+            document.getElementById('editModal').style.opacity = "0";
         });
     }
     return {
@@ -139,24 +189,12 @@ function httpGet(theUrl) {
     return xmlHttp.responseText;
 }
 
-
-//
-//$(function () {
-//    /* Handle Bar section */
-//    var theTemplateScript = $("#address-template").html();
-//    var theTemplate = Handlebars.compile(theTemplateScript);
-//    var data = httpGet('https://www.mocky.io/v2/5b0cbbd6330000d529b40099');
-//    var context = JSON.parse(data);
-//    if (context.cartitems.length) {
-//        $('.table-head tr th:eq(0) span').text(context.cartitems.length);
-//    }
-//    var theCompiledHtml = theTemplate(context);
-//    $('.cart-placeholder').html(theCompiledHtml);
-//
-//
-//    /* Modal section */
-//    document.getElementsByClassName("close")[0].onclick = function () {
-//        document.getElementById('myModal').style.display = "none";
-//        document.getElementById('myModal').style.display = "0";
-//    }
-//});
+//Register HandleBar helper for additional handlebar feature
+function reisterHelpers() {
+    Handlebars.registerHelper('sum', function (a, b) {
+        return a + b;
+    });
+       Handlebars.registerHelper('mul', function (a, b) {
+        return a * b;
+    });
+}

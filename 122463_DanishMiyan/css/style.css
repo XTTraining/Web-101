@@ -1,0 +1,504 @@
+/* ----------------------------------------------- */
+
+/* BASIC SETUP */
+
+/* ----------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #4e4e4e;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+/* ----------------------------------------------- */
+
+/* REUSABLE COMPONENTS */
+
+/* ----------------------------------------------- */
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+
+.box {
+    padding: 1%;
+}
+
+/* ----- HEADINGS ----- */
+
+header {
+    margin: 10px auto;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #151515;
+    font-weight: inherit;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 90%;
+}
+
+.currency {
+    font-weight: bold;
+}
+
+.mobile_item {
+    float: right;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 80%;
+    display: none;
+}
+
+.tab {
+    border-color: #a0a0a0;
+    border-style: solid;
+    border-width: 1px 0 3px 0;
+    color: #151515;
+
+    font-weight: bold;
+
+
+}
+
+.item {
+    padding: 15px 15px;
+    float: left;
+    width: 70%;
+    text-transform: uppercase;
+    font-size: 80%;
+}
+
+.size {
+    padding: 15px 15px;
+    float: left;
+    width: 10%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 80%;
+    font-weight: 150%;
+    font-weight: bold;
+}
+
+.qty {
+    padding: 15px 15px;
+    float: left;
+    width: 10%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: 150%;
+}
+
+.price {
+    padding: 15px 15px;
+    float: left;
+    width: 10%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: 150%;
+    font-weight: bold;
+}
+
+.input-text {
+    width: 40%;
+    text-align: center;
+    height: 30px;
+    width: 100%;
+    border: 1px slid #a0a0a0;
+}
+
+.img {
+    width: 200px;
+}
+
+.row-item {
+
+    font-weight: 300;
+    border-bottom: 1px solid #a0a0a0;
+}
+
+
+
+.product_image {
+    float: left;
+}
+
+.description {
+    float: left;
+    padding-left: 20px;
+    font-size: 100%;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.links {
+    margin-top: 70px;
+    text-align: center;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+a:hover,
+a:link,
+a:visited,
+a:active {
+    color: #696969;
+    text-decoration: none;
+
+}
+
+.lnk-shopping a:link,
+.lnk-shopping a:visited {
+    font-size: 90%;
+    color: #464242;
+    font-weight: 400;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+}
+
+.lnk-white a:link,
+.lnk-white a:visited {
+    color: #f0e8e8;
+}
+
+.no-decoration {
+    text-transform: none;
+    text-decoration: none;
+}
+
+sup {
+    font-size: 70%;
+    position: relative;
+    top: 4px;
+    left: -2px;
+}
+
+.productname {
+    letter-spacing: 1px;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.mobile_text {
+    display: none;
+}
+
+.section-shopping-bag {
+    /* border-top: 1px solid #a0a0a0;*/
+}
+
+
+
+.section-coupon {
+    padding-top: 40px;
+    border-top: 3px solid #a0a0a0;
+    font-size: 70%;
+}
+
+
+/* coupon section */
+
+.column_Needhelp {
+    padding: 10px 10px;
+    width: 30%;
+    float: left;
+}
+
+.column_coupon {
+    padding: 10px 10px;
+    width: 70%;
+    float: left;
+    text-transform: uppercase;
+
+}
+
+.apply:link,
+.apply:visited {
+    font-size: 100%;
+    border: 2px solid #a0a0a0;
+    width: 120px;
+    height: 80px;
+    color: #a0a0a0;
+}
+
+.button {
+    padding: 7px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: white;
+    color: #696969;
+    border: 1px solid #696969;
+    width: 80px;
+    height: 30px;
+    font-size: 90%;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.floatleft {
+    padding: 0px 5px;
+    float: left;
+}
+
+.span-reguar-text {
+    padding: 10px 0px;
+    display: block;
+
+}
+
+.text-underline {
+    text-decoration: underline;
+
+}
+
+.promottext {
+
+    width: 50%;
+}
+
+.left-column {
+    width: 50%;
+    float: left;
+}
+
+.right-column {
+    width: 50%;
+    text-align: right;
+    float: left;
+
+}
+
+
+hr {}
+
+/* overlay css  taken w3c.com*/
+
+#overlay {
+    position: fixed;
+    /* Sit on top of the page content */
+    display: none;
+    /* Hidden by default */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    z-index: 2;
+    /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+    /* Add a pointer on hover */
+}
+
+.overlay-edit {
+    width: 55%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 150%;
+    color: rgb(104, 103, 103);
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: white;
+    text-align: right;
+
+}
+
+.overlay-edit-1 {
+
+    width: 85%;
+
+    text-align: center;
+    margin: 0 70px 70px 70px;
+}
+
+.item-desc-box {
+    width: 80%;
+    margin: auto;
+}
+
+.overlay-product-description {
+
+    width: 40%;
+    float: left;
+    padding-top: 50px;
+}
+
+.overlay-product-photo {
+    width: 60%;
+    float: left;
+    padding: 20px 20px 20px 50px;
+}
+
+.overlay-item-price {
+    padding: 10px;
+}
+
+
+
+.overlay-item-color-icons {
+    height: 30px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.coloricon {
+    width: 15px;
+    height: 15px;
+    border: 1px solid grey;
+    margin: 5px;
+    text-align: center;
+}
+
+
+.coloricon.blue {
+    background-color: red;
+    display: inline-block;
+}
+
+.overlay-size {
+    float: left;
+    width: 50%;
+
+}
+
+.overlay-qty {
+    float: left;
+    width: 50%;
+}
+
+.overlay-item-buton {
+    text-align: center;
+    margin-left: 5px;
+    padding: 10px 0;
+    width: 95%;
+    font-size: 50%;
+}
+
+.overlay-item-edit {
+    padding: 10px 0;
+}
+
+.overlay-qty {}
+
+.overlay-item-color-label {
+
+    font-size: 20px;
+
+}
+
+.overlay-size select,
+.overlay-qty select {
+
+    font-size: 50%;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid rgb(179, 177, 177);
+}
+
+.overlay-product-detail {
+    width: 100%;
+    font-size: 50%;
+    color: rgb(104, 103, 103);
+    font-weight: 500;
+    padding: 10px 0;
+    float: left;
+    text-align: center;
+
+}
+
+.overlay-item-product-details a:visited,
+.overlay-item-product-details a.link {
+    text-decoration: none;
+    color: rgb(104, 103, 103);
+}
+
+.btn-close {
+    margin: 4px 9px 0 0;
+}
+
+
+/*       */
+
+.promotion {
+    padding: 20px 20px;
+    border-bottom: 3px solid #a0a0a0;
+}
+
+.subtotal-row {
+    padding: 20px 10px;
+}
+
+.btn-checkout {
+    width: 20%;
+    float: left;
+    border: 1px solid #a0a0a0;
+    height: 42px;
+    text-align: center;
+    padding: 10px;
+    font-size: 80%;
+    background-color: #116cc1;
+    color: white;
+    font-weight: bold;
+}
+
+.white {
+    color: white;
+
+}
+
+.shopping {
+    width: 80%;
+    padding-left: 50%;
+    padding-top: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    float: left;
+}

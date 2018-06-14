@@ -1,0 +1,162 @@
+/* Big tablet to 1200px (widths smaller taht the 1140px row) */
+
+@media only screen and (max-width: 1200px) {
+
+    .row {
+        padding: 0 2%;
+    }
+}
+
+
+/* Small phones: from 0 to 480px */
+
+@media only screen and (max-width: 480px) {
+
+
+    h1 {
+
+
+        font-size: 100%;
+        font-weight: 400;
+        word-spacing: 4px;
+        letter-spacing: 0;
+        float: left;
+
+    }
+    .section-shopping-bag {
+        border-top: 3px solid #a0a0a0;
+    }
+    .tab {
+        display: none;
+    }
+
+    .mobile_item {
+        float: right;
+        text-align: right;
+        text-transform: uppercase;
+        font-size: 60%;
+        font-weight: 400;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .item {
+        padding: 15px 15px;
+        float: right;
+        text-align: right;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 80%;
+    }
+
+
+
+    .row-item {
+        color: #939191;
+        font-weight: 400;
+        border-bottom: 1px solid #e3e3e3;
+    }
+
+    .size {
+        padding: 15px 15px;
+        width: 50%;
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 50%;
+        font-weight: 100%;
+        position: relative;
+        top: -140px;
+        left: 203px;
+    }
+
+
+    .qty {
+        padding-left: 20px;
+        float: left;
+        width: 50%;
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 40%;
+        font-weight: bold;
+        position: relative;
+        top: -120px;
+        left: 0px;
+    }
+
+    .price {
+        padding-left: 20px;
+        float: left;
+        width: 50%;
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 80%;
+        font-weight: bold;
+        position: relative;
+        top: -120px;
+        left: 200px;
+    }
+
+    .row-item clearfix {}
+
+    .img {
+        width: 175px;
+    }
+
+    .productname {
+        letter-spacing: 1px;
+        font-size: 100%;
+        font-weight: bold;
+    }
+    .product_image {
+        float: left;
+        width: 50%;
+    }
+    .description {
+        float: left;
+        padding-left: 20px;
+        padding-top: 20px;
+        font-size: 60%;
+        text-align: left;
+        width: 50%;
+        line-height: 1.25;
+
+    }
+    .links {
+        width: 200%;
+        position: relative;
+        top: 100px;
+        left: -160px;
+        letter-spacing: 2px;
+
+    }
+
+    .input-text {
+        width: 20%;
+        text-align: center;
+
+    }
+
+
+    .mobile_text {
+        display: inline;
+
+    }
+
+    sup {
+        font-size: 60%;
+        position: relative;
+        top: 3px;
+        left: -2px;
+
+    }
+
+
+    .column_Needhelp {
+        display: none;
+    }
+
+    .column_coupon {
+        width: 100%;
+    }
+
+    .row {}

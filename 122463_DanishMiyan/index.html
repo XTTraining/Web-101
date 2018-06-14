@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/queries.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="row clearfix">
+                <h1>Your Shopping Bag</h1>
+                <span class="mobile_item"><strong>3</strong> items</span>
+            </div>
+        </header>
+
+        <section class="section-shopping-bag clearfix">
+            <div class="row">
+                <div class="tab clearfix">
+                    <span class="item"><strong>3</strong> items</span>
+                    <span class="size">size</span>
+                    <span class="size">qty</span>
+                    <span class="size">price</span>
+                </div>
+                
+                <!-- Product Item 1  -->
+
+                <div class="row-item clearfix">
+                    <div class="item">
+                        <div class="product_image">
+                            <img src="images/ProductImage1.jpg" class="img">
+                        </div>
+
+                        <div class="description">
+                            <div class="productname">SOLID GREEN COTTON TSHIRT</div>
+                            <div class="style">Style #: MS1013KT101</div>
+                            <div class="color">Color : Blue</div>
+                            <div class="links"><a href="#" onclick="showOverlay()">EDIT</a> | <a href="#">X REMOVE</a> | <a href="#">SAVE FOR LATER</a></div>
+                        </div>
+                    </div>
+
+                    <div class="size">
+                        <sapn class="mobile_text">Size : </sapn>S</div>
+                    <div class="qty">
+                        <sapn class="mobile_text">Qty : </sapn><input type="text" class="input-text" value="1"></div>
+                    <div class="price"><sup>$</sup>99.00</div>
+                </div>
+
+                <!-- Product Item 1  -->
+                
+                <!-- Product Item 2  -->
+                <div class="row-item clearfix">
+                    <div class="item">
+                        <div class="product_image">
+                            <img src="images/ProductImage2.jpg" class="img">
+                        </div>
+
+                        <div class="description">
+                            <div class="productname">SOLID GREEN COTTON TSHIRT</div>
+                            <div class="style">Style #: MS1013KT101</div>
+                            <div class="color">Color : Blue</div>
+                            <div class="links"><a href="#" onclick="showOverlay()">EDIT</a> | <a href="#">X REMOVE</a> | <a href="#">SAVE FOR LATER</a></div>
+                        </div>
+                    </div>
+                    <div class="size">
+                        <sapn class="mobile_text">Size : </sapn>S</div>
+                    <div class="qty">
+                        <sapn class="mobile_text">Qty : </sapn><input type="text" class="input-text" value="1"></div>
+                    <div class="price"><sup>$</sup>99.00</div>
+                </div>
+                <!-- Product Item 2  -->
+            </div>
+        </section>
+
+        <section class="section-coupon">
+            <div class="row">
+                <div class="column_Needhelp">
+                    <span class="span-reguar-text"><strong>Need help <br/> or have question?</strong></span>
+                    <span class="span-reguar-text">Call Customer Service at <br> 1-800-555-5555</span>
+                    <span class="span-reguar-text text-underline">Chat with one of <br>our stttylists</span>
+                    <span class="span-reguar-text text-underline">See return <br> &amp; exchange policy</span>
+                </div>
+                <div class="column_coupon">
+                    <div class="promotion clearfix">
+                        <span class="floatleft promottext">Enter promotion code <br> OR gift card </span>
+                        <span class="floatleft"><input type="text" class="input-text"></span>
+                        <span class="floatleft"><a href="#" class="button">Apply</a></span>
+                    </div>
+                    <div class="subtotal-row clearfix">
+                        <div class="left-column">
+                            <h3>Subtotal</h3>
+                        </div>
+                        <div class="right-column">
+                            <span class="currency">$37.00</span>
+                        </div>
+                    </div>
+                    <div class="subtotal-row clearfix">
+                        <div class="left-column">
+                            <h3>Promotion Code JF10 applied</h3>
+                        </div>
+                        <div class="right-column currency">-$7.00</div>
+                    </div>
+                    <div class="subtotal-row promotion clearfix">
+                        <div class="left-column">
+                            <h3>Estimated delivery</h3>
+                            <span> You qualify for free shipping
+                            <br> because your order is over $50*
+                        </span>
+                        </div>
+                        <div class="right-column">
+                            <span class="currency">$37.00</span>
+                        </div>
+                    </div>
+                    <div class="subtotal-row clearfix">
+                        <div class="shopping lnk-shopping">
+                            <a href="#">Continue shopping</a>
+                        </div>
+                        <div class="btn-checkout lnk-white">
+                            <a href="#">Checkout</a>
+                        </div>
+                    </div>
+
+                    <div class="subtotal-row clearfix">
+                        <div class="left-column">
+                            &nbsp;
+                        </div>
+                        <div class="right-column">
+                            <span class="no-decoration">
+                                 <img alt="secure" src="images/secure.png"> Secure checkout. Shopping is always safe & secure
+                            </span>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+    <div id="overlay">
+        <div class="overlay-edit">
+            <span class="btn-close" onclick="hideOverlay()">
+                    <strong>X</strong>
+                </span>
+            <div class="overlay-edit-1 clearfix">
+                <div class="overlay-product-description">
+
+                    <div class="item-desc-box">
+                        <div class="overlay-item-name">
+                            <span>SOLID GREEN COTTON TSHIRT</span>
+                        </div>
+                        <div class="currency">
+                            <span>$99.00</span>
+                        </div>
+                        <div class="overlay-item-buton checkout btn btn-blue">
+                            <a href="#">Update</a>
+                        </div>
+
+                        <div class="overlay-product-detail">
+                            <a href="#">See product details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay-product-photo">
+                    <img src="images/ProductImage1.jpg" alt="product tile">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/script.js"></script>
+
+</html>

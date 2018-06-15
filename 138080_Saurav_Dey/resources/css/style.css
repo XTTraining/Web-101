@@ -324,3 +324,139 @@ h4 {
 .checkout-info:after {
     display: none;    
 }
+
+.desktop-overlay-off{display: none;}
+
+.desktop-overlay-on{
+    position: fixed; /* Sit on top of the page content */
+    display: block; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.1); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    color: inherit;
+    cursor: pointer; /* Add a pointer on hover */}
+
+.overlay-content{
+   background-color: #fff;
+    text-align:center;
+    height: 70%;/*height needs to be set*/
+    width: 70%;
+    position: relative;    
+    bottom: 0;
+    left: 0;  
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 500px;
+    min-width: 500px;
+}
+.overlay-close{
+    float: right;
+    padding: 10px 10px 10px 10px;
+    font-size: 24px;    
+}
+
+.overlay-item{
+    padding: 40px 10px 10px 10px;
+    font-weight: 400;
+    font-size: 20px; 
+    width:45%;
+}
+
+.overlay-item:before {
+    display: block;
+    height: 5px;
+    background-color: #ddd;
+    content: " ";
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.overlay-label{
+    color: #bbb;
+}
+.overlay-unit{
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.overlay-unit sup{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.square{
+    width: 20px;
+    height: 20px;   
+    display: inline-block;
+    margin: 5px 10px 5px 0;
+}
+
+.overlay-item-color
+{
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.overlay-item-color p{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.overlay-units select{
+    width: 80px;
+    height: 40px;
+    font-size: 16px;    
+    border: 1px solid #bbb;
+    margin-top: 20px;
+}
+
+.overlay-btn input{
+    margin-left: 0;
+    margin-top:20px;
+    padding: 10px 20px;
+    background-color: #2b5291;
+    border: 1px solid;
+    font-weight: 400;
+    color: #fff;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.overlay-link a{
+    font-size: 14px;
+    margin: 25px 0 5px 0;
+    font-weight: 400;
+    color: inherit;
+    word-spacing: 4px;
+}
+
+.overlay-image{
+    width: 45%;
+    position: relative;
+    height: 80%;
+}
+
+.overlay-image img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay-label{
+    text-transform: uppercase;
+}
+
+.select-size:selected{
+    color: black;
+}

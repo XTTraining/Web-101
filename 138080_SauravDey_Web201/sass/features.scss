@@ -1,0 +1,172 @@
+.features{    
+    grid-column: full-start/full-end;    
+    padding: 1rem;
+    font-family: $font-display;
+    min-height:100%;
+
+    .accordion {
+    background-color: $color-primary-dark;
+    color: $color-primary-font;
+    cursor: pointer;
+    font-size: 1.8rem;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 1s;
+    margin-bottom: 10px;
+    }
+    
+    .active, .accordion:hover {
+        background-color: $color-primary-hover; 
+        //color: $color-primary;
+    }
+    
+    .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: $color-primary;        
+    }
+
+    .menu-item{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+        grid-gap: 5rem;
+        align-items: start;
+        align-content: center;
+        color: $color-primary-font;                        
+    }
+
+    .panel-item{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, 1fr));
+    background-color: $color-primary-btn;
+    height: 500px;
+    min-height: 350px;
+    min-height: 350px;
+    margin-bottom: 20px;
+    width: 100%;
+
+        img{
+            width: 80%;
+            grid-row: 1 / 1;
+            grid-column: 1 / -1;
+            z-index: 1;
+            justify-self: center;
+            align-self: end;
+            min-width: 200px;
+            max-height: 200px;
+        }
+
+        .menu__name {
+            grid-row: 1 / 1;
+            grid-column: 1 / -1;
+            justify-self: center;
+            align-self: end;
+            z-index: 3;
+            width: 90%;
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 1.6rem;
+            text-align: center;
+            padding: 1.5rem;
+            background-color: $color-primary-dark;
+            color: $color-primary-font;
+            font-weight: 400;
+            transform: translateY(50%);
+        }
+
+        .menu__price
+        {
+            grid-row: 2 / 4;
+            grid-column: 1 / -1;
+            width: 92%;
+            margin-left: 2rem;
+            background-color: inherit;
+            font-size: 2rem;            
+            font-family: "Josefin Sans", sans-serif;
+            margin-top: 10px; 
+            text-align: center;
+            span{
+                color: inherit;
+                font-weight: 500;
+                float: left;                
+            }
+
+            .price__tag
+                {
+                    float: right;
+                }            
+        }
+
+        .menu__qty{
+            grid-row: 3 / 4;
+            grid-column: 1 / 4;
+            width: 98%;
+            background-color: inherit;
+            font-size: 2rem;            
+            font-family: "Josefin Sans", sans-serif;            
+            text-align: center;
+            margin-top: 30px;
+            //transform: translateY(50%);
+            span{
+                color: inherit;
+                font-weight: 500;
+            }
+
+            .qtyminus{
+                grid-column: 1 / -1;
+            }
+
+            .qty{
+                grid-column: 1 / -2;                
+                text-align: center;
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+                padding: 1rem;
+                width:50%;
+                &::-webkit-inner-spin-button,
+                ::-webkit-outer-spin-button {
+                appearance: none;    }
+            }
+
+            .qtyplus{
+                grid-column: 3 / -3;
+            }
+        }
+
+        .menu__btn{
+            grid-row: 4 / 4;
+            grid-column: 1 / -1;
+            background-color: $color-primary-btn;
+            font-size: 2rem;            
+            font-family: "Josefin Sans", sans-serif;
+
+            input{
+                padding: 1.5rem;
+                width:45%;
+                text-decoration: none;
+                font-size: 2rem;
+                background-color: $color-primary-dark;
+                margin: 2%;
+            }
+        }       
+
+    }
+}
+
+.qtyplus,.qtyminus{  
+    border-radius: 50%;
+    padding: 0.25em 0.8em;                
+}
+
+.qty{               
+    text-align: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: .8rem;
+    width:50%;
+    &::-webkit-inner-spin-button,
+    ::-webkit-outer-spin-button {
+    appearance: none;    }
+}

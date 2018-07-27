@@ -503,7 +503,7 @@ body {
   .search .badge:after {
     content: attr(data-count);
     position: absolute;
-    background: #ff6600;
+    background: #f18d29;
     height: 2rem;
     top: 1rem;
     right: 1rem;
@@ -512,8 +512,8 @@ body {
     line-height: 2rem;
     font-size: 1rem;
     border-radius: 50%;
-    color: white;
-    border: 1px solid #ff6600;
+    color: #E0FFFF;
+    border: 1px solid #f18d29;
     font-family: sans-serif;
     font-weight: bold; }
 
